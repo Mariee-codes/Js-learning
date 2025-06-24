@@ -20,15 +20,39 @@
 // age+=1;
 // console.log(age);
 
-let x ="pizza";
-let y ="pizza";
-let z ="pizza";
+// let x ="pizza";
+// let y ="pizza";
+// let z ="pizza";
 
-x = Number(x);
-y = String(y);
-z = Boolean(z);
+// x = Number(x);
+// y = String(y);
+// z = Boolean(z);
 
-console.log(x, typeof x);
-console.log(y, typeof y);
-console.log(z, typeof z);
+// console.log(x, typeof x);
+// console.log(y, typeof y);
+// console.log(z, typeof z);
+
+// javascript constants
+// const = a variable that cant be changed
+// let pie = 3.14159;
+// let radius ;
+// let circumference;
+
+// radius = window.prompt('enter radius of a circle');
+// radius = Number(radius);
+
+// circumference = 2 * pie * radius;
+// console.log(circumference);
+
+ const PIE =3.14159;
+let radius ;
+let circumference;
+
+document.getElementById("mySubmit").onclick = function(){
+    radius = document.getElementById("myText").value;
+    radius = Number(radius);
+    circumference = 2 * PIE * radius;
+    document.getElementById("myH3").textContent= circumference + "cm";
+
+}
 
