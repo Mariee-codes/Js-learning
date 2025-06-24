@@ -44,15 +44,16 @@
 // circumference = 2 * pie * radius;
 // console.log(circumference);
 
- const PIE =3.14159;
-let radius ;
-let circumference;
+//  const PIE =3.14159;
+// let radius ;
+// let circumference;
 
-document.getElementById("mySubmit").onclick = function(){
-    radius = document.getElementById("myText").value;
-    radius = Number(radius);
-    circumference = 2 * PIE * radius;
-    document.getElementById("myH3").textContent= circumference + "cm";
+// document.getElementById("mySubmit").onclick = function(){
+//     radius = document.getElementById("myText").value;
+//     radius = Number(radius);
+//     circumference = 2 * PIE * radius;
+//     document.getElementById("myH3").textContent= circumference + "cm";
 
-}
+// }
 
+// COUNTER PROGRAM
