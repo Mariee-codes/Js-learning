@@ -112,29 +112,119 @@
 // let randomNum = Math.floor(Math.random()* (max -min))+min;
 // console.log(randomNum);
 
-const myButton = document.getElementById("myButton");
-const Label1 = document.getElementById("Label1");
-const Label2 = document.getElementById("Label2");
-const Label3 = document.getElementById("Label3");
-const min =1;
-const max = 6;
-let randomNum1;
-let randomNum2;
-let randomNum3;
+// const myButton = document.getElementById("myButton");
+// const Label1 = document.getElementById("Label1");
+// const Label2 = document.getElementById("Label2");
+// const Label3 = document.getElementById("Label3");
+// const min =1;
+// const max = 6;
+// let randomNum1;
+// let randomNum2;
+// let randomNum3;
 
-myButton.onclick = function(){
-    randomNum1 = Math.floor(Math.random() *max) +min;
-     randomNum2 = Math.floor(Math.random() *max) +min;
-      randomNum3 = Math.floor(Math.random() *max) +min;
-    Label1.textContent= randomNum1;
-    Label2.textContent= randomNum2;
-    Label3.textContent= randomNum3;
+// myButton.onclick = function(){
+//     randomNum1 = Math.floor(Math.random() *max) +min;
+//      randomNum2 = Math.floor(Math.random() *max) +min;
+//       randomNum3 = Math.floor(Math.random() *max) +min;
+//     Label1.textContent= randomNum1;
+//     Label2.textContent= randomNum2;
+//     Label3.textContent= randomNum3;
+// }
+
+// WEATHER APP
+const weatherForm = document.querySelector(".weatherForm");
+const cityInput = document.querySelector(".cityInput");
+const card = document.querySelector(".card")
+const apiKey = ("3e6c49188ad007c074bdaed1779495a8");
+
+weatherForm.addEventListener("submit", async event => {
+
+event.preventDefault(); //stops form from reloading page
+
+const city = cityInput.value;
+
+if(city){
+    try{
+        const weatherData = await getWeatherData(city);
+        displayWeatherInfo(weatherData);
+    }
+    catch(error){
+        console.error(error);
+        displayError(error);
+    }
+
+    
+}
+else {
+    displayError("please enter a city");
+}
+});
+
+
+async function getWeatherData(city){
+    const apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+const response = await fetch(apiurl);
+console.log(response);
+}
+
+function getWeatherInfo(data){
+
+}
+
+function getWeatherEmoji(weatherId){
+
+}
+
+function displayError(message){
+ errorDisplay = document.createElement("p");
+    errorDisplay.textContent = message;
+    errorDisplay.classList.add("errorDisplay");
+
+    card.textContent = "" 
+    card.style.display = "flex";
+    card.appendChild(errorDisplay);
+
 }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const getText=()=>{
+//    const text= "my family loves Marion";
+//     return text;
+// }
+// const promisegetText=async()=>{
+//  const text= "my family loves Marion";
+//     return text;
+// }
+// const main=async ()=>{
+//     let voidText= getText();
+//     console.log({voidText});
+//     let promisedText= await promisegetText();
+//     console.log({aPromise:promisedText});
+// }
+// main();
 
 
 
