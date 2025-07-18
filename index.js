@@ -317,68 +317,128 @@
 
 
 // SWITCHES
-let day = 1;
-switch(day){
-    case 1:
-        console.log("its Monday");
-        break;
-    case 2:
-        console.log("its tuesday");
-        break;
-    case 3:
-        console.log("its wednesday");
-        break;
-     case 4:
-        console.log("its thursday");
-        break;
-     case 5:
-        console.log("its friday");
-        break;
-    case 6:
-        console.log("its saturday");
-        break;
-     case 7:
-        console.log("its sunday");
-        break;
-        default:
-            console.log(`${day} its not a day`);       
+// let day = 1;
+// switch(day){
+//     case 1:
+//         console.log("its Monday");
+//         break;
+//     case 2:
+//         console.log("its tuesday");
+//         break;
+//     case 3:
+//         console.log("its wednesday");
+//         break;
+//      case 4:
+//         console.log("its thursday");
+//         break;
+//      case 5:
+//         console.log("its friday");
+//         break;
+//     case 6:
+//         console.log("its saturday");
+//         break;
+//      case 7:
+//         console.log("its sunday");
+//         break;
+//         default:
+//             console.log(`${day} its not a day`);       
+// }
+
+// let testScore = 92;
+// let letterGrade;
+
+// switch(true){
+//     case testScore >= 90:
+//         letterGrade = "A" ;
+//         break;
+//     case testScore >= 80:
+//         letterGrade = "B" ;
+//         break;
+
+//     case testScore >= 70:
+//         letterGrade = "C" ;
+//         break;
+//     case testScore >= 60:
+//         letterGrade = "D" ;
+//         break;
+//         default:
+//             letterGrade = "F";
+
+// }
+// console.log(letterGrade);
+
+// IF STATEMENTS
+// let age = 25;
+// if (age>=18){
+//     console.log("youre allowed to enter this site");
+// }
+// else {
+//     console.log("youre still a minor");
+// }
+
+// let time = 9;
+// if(time<12){
+//     console.log("goodmiorning");
+// }
+// else{
+//     console.log("goodafternoon")
+// }
+
+// boolean variables
+// let isStudent = false;
+// if (isStudent){
+//     console.log("you are a student");
+// }
+// else{
+//     console.log("youre not a student");
+// }
+const myText =  document.getElementById("myText");
+const mySubmit = document.getElementById("mySubmit");
+const resultElement = document.getElementById("resultElement");
+let age ;
+
+mySubmit.onclick = function(){
+    age= myText.value;
+    age = Number(age);
+
+    if(age>=100){
+        resultElement.textContent=`you are too old to enter the site`;
+}
+ else if(age >=18){
+        resultElement.textContent = `you are old enough to enter this site`
+}
+else if(age == 0){
+    resultElement.textContent=`you cant enter ,you werre just born`
+}
+else if(age<0){
+resultElement.textContent = `your age cant be below zero`
+}
+else if(age>=100){
+    resultElement.textContent = `you are too old to enter the site`
+}
+else{
+    resultElement.textContent = `you must be 18+ to enter this site`
 }
 
-let testScore = 92;
-let letterGrade;
 
-switch(true){
-    case testScore >= 90:
-        letterGrade = "A" ;
-        break;
-    case testScore >= 80:
-        letterGrade = "B" ;
-        break;
-
-    case testScore >= 70:
-        letterGrade = "C" ;
-        break;
-    case testScore >= 60:
-        letterGrade = "D" ;
-        break;
-        default:
-            letterGrade = "F";
 
 }
-console.log(letterGrade);
+// let hasLicense = false;
+// if(age>= 15){
+//     console.log("you are old enough to drive");
 
+//     if (hasLicense){
+//         console.log("you have your license!");
+//     }
+//     else{
+//         console.log("you do not have your license yet");
+//     }
+// }
+// else{
+//     console.log("you must be 16+ to have a license");
+// }
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
