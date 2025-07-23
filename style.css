@@ -5,6 +5,8 @@
     font-family:  Helvetica;
 
 }
+    #description{{
+
 
 #btnContainer{
     text-align: center;
@@ -38,7 +40,7 @@ body{
     font-size: 3em;
 } */
 
-body{
+/* body{
     font-family: Arial,sans-serif;
     background-color:hsl(0, 0%, 95%);
     margin: 0;
@@ -115,4 +117,8 @@ p{
     font-size: 2.5rem;
     font-weight: bold;
     color: red;
+} */
+
+#mySubmit{
+    font-size: 1em;
 }

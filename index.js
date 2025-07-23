@@ -392,55 +392,112 @@
 // else{
 //     console.log("youre not a student");
 // }
-const myText =  document.getElementById("myText");
-const mySubmit = document.getElementById("mySubmit");
-const resultElement = document.getElementById("resultElement");
-let age ;
+// const myText =  document.getElementById("myText");
+// const mySubmit = document.getElementById("mySubmit");
+// const resultElement = document.getElementById("resultElement");
+// let age ;
 
-mySubmit.onclick = function(){
-    age= myText.value;
-    age = Number(age);
+// mySubmit.onclick = function(){
+//     age= myText.value;
+//     age = Number(age);
 
-    if(age>=100){
-        resultElement.textContent=`you are too old to enter the site`;
-}
- else if(age >=18){
-        resultElement.textContent = `you are old enough to enter this site`
-}
-else if(age == 0){
-    resultElement.textContent=`you cant enter ,you werre just born`
-}
-else if(age<0){
-resultElement.textContent = `your age cant be below zero`
-}
-else if(age>=100){
-    resultElement.textContent = `you are too old to enter the site`
-}
-else{
-    resultElement.textContent = `you must be 18+ to enter this site`
-}
-
-
-
-}
-// let hasLicense = false;
-// if(age>= 15){
-//     console.log("you are old enough to drive");
-
-//     if (hasLicense){
-//         console.log("you have your license!");
-//     }
-//     else{
-//         console.log("you do not have your license yet");
-//     }
+//     if(age>=100){
+//         resultElement.textContent=`you are too old to enter the site`;
+// }
+//  else if(age >=18){
+//         resultElement.textContent = `you are old enough to enter this site`
+// }
+// else if(age == 0){
+//     resultElement.textContent=`you cant enter ,you werre just born`
+// }
+// else if(age<0){
+// resultElement.textContent = `your age cant be below zero`
+// }
+// else if(age>=100){
+//     resultElement.textContent = `you are too old to enter the site`
 // }
 // else{
-//     console.log("you must be 16+ to have a license");
+//     resultElement.textContent = `you must be 18+ to enter this site`
 // }
+// }
+// // let hasLicense = false;
+// // if(age>= 15){
+// //     console.log("you are old enough to drive");
+
+// //     if (hasLicense){
+// //         console.log("you have your license!");
+// //     }
+// //     else{
+// //         console.log("you do not have your license yet");
+// //     }
+// // }
+// // else{
+// //     console.log("you must be 16+ to have a license");
+// // }
 
  
+// .checked = PROPERTY THAT DETERMINES THE CHECKED STATE OF AN HTMl CHECKBOX OR RADIO BUTTON ELEMENT.
+
+// const visaBtn = document.querySelector("#visaBtn");
+// //get data from the button
+// //checked
+
+// console.log("option selected is ",visaBtn.checked)
+// visaBtn.addEventListener("click",()=>{
+
+//     //todo();
+//     console.log("option selected is ",visaBtn.checked);
+//     const isChecked=visaBtn.checked;
+//     if (isChecked){
+//         console.log("visa was chosed");
+//     }else{
+//         console.log("visa was not slected");
+//     }
+
+// });
+
+// //description
+// const description=document.querySelector("#description");
+// console.log("description is ",description.value);
+
+// description.addEventListener("change",(e)=>{
+//     console.log("description on change is  ",e.target.value);
+// });
 
 
+//variables
+// const myCowIsDying= "this is my cow";
+// const myCowIsAlive="this is my cow";
+
+const myCheckbox = document.getElementById("myCheckbox");
+const subResult = document.getElementById("subResult");
+const payPalBtn = document.getElementById("payPalBtn");
+const mySubmit = document.getElementById("mySubmit");
+const visaBtn = document.getElementById("visaBtn");
+const masterCardBtn = document.getElementById("masterCardBtn");
+const paymentResult = document.getElementById("paymentResult");
+
+// mySubmit.addEventListener("click",()=>{
+
+mySubmit.onclick = function(){
+    if(myCheckbox.checked){
+        subResult.textContent = `you are subscribed`;
+    }else{
+        subResult.textContent = `you are not subscribed`;
+    }
+
+if (visaBtn.checked){
+    paymentResult.textContent = `you are paying with Visa`;
+}
+else if (masterCardBtn.checked){
+    paymentResult.textContent = `you are paying with MasterCard`;
+}
+else if (payPalBtn.checked){
+    paymentResult.textContent = `you are paying with Paypal`;
+}
+else{
+   paymentResult.textContent = `you are paying with none of the cards`;}
+};
 
 
 
