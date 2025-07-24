@@ -468,40 +468,80 @@
 //variables
 // const myCowIsDying= "this is my cow";
 // const myCowIsAlive="this is my cow";
+// 
+// const myCheckbox = document.getElementById("myCheckbox");
+// const subResult = document.getElementById("subResult");
+// const payPalBtn = document.getElementById("payPalBtn");
+// const mySubmit = document.getElementById("mySubmit");
+// const visaBtn = document.getElementById("visaBtn");
+// const masterCardBtn = document.getElementById("masterCardBtn");
+// const paymentResult = document.getElementById("paymentResult");
 
-const myCheckbox = document.getElementById("myCheckbox");
-const subResult = document.getElementById("subResult");
-const payPalBtn = document.getElementById("payPalBtn");
-const mySubmit = document.getElementById("mySubmit");
-const visaBtn = document.getElementById("visaBtn");
-const masterCardBtn = document.getElementById("masterCardBtn");
-const paymentResult = document.getElementById("paymentResult");
+// // mySubmit.addEventListener("click",()=>{
 
-// mySubmit.addEventListener("click",()=>{
+// mySubmit.onclick = function(){
+//     if(myCheckbox.checked){
+//         subResult.textContent = `you are subscribed`;
+//     }else{
+//         subResult.textContent = `you are not subscribed`;
+//     }
 
-mySubmit.onclick = function(){
+// if (visaBtn.checked){
+//     paymentResult.textContent = `you are paying with Visa`;
+// }
+// else if (masterCardBtn.checked){
+//     paymentResult.textContent = `you are paying with MasterCard`;
+// }
+// else if (payPalBtn.checked){
+//     paymentResult.textContent = `you are paying with Paypal`;
+// }
+// else{
+//    paymentResult.textContent = `you are paying with none of the cards`;}
+// };
+
+
+// strimg methods = allow you to manipulate and work with text(strings)
+const myCheckbox = document.querySelector("#myCheckbox");
+const swimBtn = document.querySelector("#swimBtn");
+const drawBtn = document.querySelector("#drawBtn");
+const readBtn = document.querySelector("#readBtn");
+const playBtn = document.querySelector("#playBtn");
+const singBtn = document.querySelector("#singBtn");
+const danceBtn = document.querySelector("#danceBtn");
+const mySubmit = document.querySelector("#mySubmit");
+const outcomeElement = document.querySelector("#outcomeElement");
+const noOutcomeElement = document.querySelector("#noOutcomeElement");
+
+mySubmit.addEventListener("click",()=>{
     if(myCheckbox.checked){
-        subResult.textContent = `you are subscribed`;
-    }else{
-        subResult.textContent = `you are not subscribed`;
+        outcomeElement.textContent = `you are a swimmer`;
     }
-
-if (visaBtn.checked){
-    paymentResult.textContent = `you are paying with Visa`;
+    else{
+        noOutcomeElement.textContent = `you are not a swimmer`;
+    }
+})
+if(swimBtn.checked){
+    outcomeElement.textContent = `you are a swimmer`;
 }
-else if (masterCardBtn.checked){
-    paymentResult.textContent = `you are paying with MasterCard`;
+else if(drawBtn.checked){
+    outcomeElement.textContent = `you are a drawer`;
 }
-else if (payPalBtn.checked){
-    paymentResult.textContent = `you are paying with Paypal`;
+else if(readBtn.checked){
+    outcomeElement.textContent = `you are a reader`;
+}
+else if(playBtn.checked){
+    outcomeElement.textContent = `you are a player`;
+}
+else if(singBtn.checked){
+    outcomeElement.textContent = `you are a singer`;
+}
+else if(danceBtn.checked){
+    outcomeElement.textContent = `you are a dancer`;
 }
 else{
-   paymentResult.textContent = `you are paying with none of the cards`;}
-};
-
-
-
-
+    noOutcomeElement.textContent = `you are not a hobbyist`;
+}
+        
 
 
 
