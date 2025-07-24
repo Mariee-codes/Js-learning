@@ -566,40 +566,59 @@ let userName = "BroCode    ";
 // userName = userName.trimStart();
 // console.log(userName);
 
-let result = userName.startsWith(" ");
-console.log(result);
+// let result = userName.startsWith(" ");
+// console.log(result);
 
-if(result){
-    console.log("your username cant begin wth ' '");
-}
-else{
-    console.log(" userName");
-}
+// if(result){
+//     console.log("your username cant begin wth ' '");
+// }
+// else{
+//     console.log(" userName");
+// }
 
-let result2 = userName.endsWith(" ");
-console.log(result2);
+// let result2 = userName.endsWith(" ");
+// console.log(result2);
 
-if (result2){
-    console.log("your username cant end with ' '");
-}
-else{
-    console.log("userName");
-}
-
-
-let phoneNumber = "123-456-7890";
-phoneNumber = phoneNumber.replaceAll("-","");
-console.log(phoneNumber);
-
-phoneNumber = phoneNumber.padStart(10,"1");
-console.log(phoneNumber);
-phoneNummber = phoneNumber.padEnd(10,"1");
-console.log(phoneNumber);
+// if (result2){
+//     console.log("your username cant end with ' '");
+// }
+// else{
+//     console.log("userName");
+// }
 
 
+// let phoneNumber = "123-456-7890";
+// phoneNumber = phoneNumber.replaceAll("-","");
+// console.log(phoneNumber);
+
+// phoneNumber = phoneNumber.padStart(10,"1");
+// console.log(phoneNumber);
+// phoneNummber = phoneNumber.padEnd(10,"1");
+// console.log(phoneNumber);
 
 
 
+// STRING SLICING IN JAVASCRIPT creating a substring from a portion of a string
+// string.slice(start,end)
+// const fullName = "Marie Code";
+// // let firstName = fullName.slice(0,5);
+// // console.log(firstName);
+// // let lastName = fullName.slice(6,10);
+// firstName = fullName.slice(0,fullName.indexOf(" "));
+// console.log(firstName);
+
+// lastName = fullName.slice(fullName.indexOf(" ")+1);
+// console.log(lastName);
+
+// let firstChar = fullName.slice(0,1);
+// console.log(firstChar);
+
+const email = "marie@gmail.com";
+let username = email.slice(0,email.indexOf("@"));
+let extension = email.slice(email.indexOf("@")+1);
+
+console.log(extension);
+console.log(username);
 
 
 
