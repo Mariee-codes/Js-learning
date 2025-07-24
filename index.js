@@ -543,7 +543,7 @@
 // }
 
 // strimg methods = allow you to manipulate and work with text(strings)
-let userName = "BroCode    ";
+//let userName = "BroCode    ";
 //console.log(userName.charAt(0));
 //console.log(userName.indexOf("o"));
 // console.log(userName.lastIndexOf("o"));
@@ -613,14 +613,31 @@ let userName = "BroCode    ";
 // let firstChar = fullName.slice(0,1);
 // console.log(firstChar);
 
-const email = "marie@gmail.com";
-let username = email.slice(0,email.indexOf("@"));
-let extension = email.slice(email.indexOf("@")+1);
+// const email = "marie@gmail.com";
+// let username = email.slice(0,email.indexOf("@"));
+// let extension = email.slice(email.indexOf("@")+1);
 
-console.log(extension);
-console.log(username);
+// console.log(extension);
+// console.log(username);
 
+// JS METHOD CHAINING
+// CALLING ONE METHOD AFTER ANOTHER IN A CHAIN
 
+//  NO METHOD CHAINING
+let userName = window.prompt("enter your userName: ");
+
+userName= userName.trim();
+let letter = userName.charAt(0);
+letter = letter.toUpperCase();
+
+let extraChars = userName.slice(1);
+extraChars = extraChars.toLowerCase();
+userName = letter + extraChars;
+console.log(userName);
+
+// METHOD CHAINING
+userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+console.log(userName);
 
 
 
