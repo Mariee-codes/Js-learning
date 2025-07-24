@@ -501,54 +501,100 @@
 
 
 // strimg methods = allow you to manipulate and work with text(strings)
-const myCheckbox = document.querySelector("#myCheckbox");
-const swimBtn = document.querySelector("#swimBtn");
-const drawBtn = document.querySelector("#drawBtn");
-const readBtn = document.querySelector("#readBtn");
-const playBtn = document.querySelector("#playBtn");
-const singBtn = document.querySelector("#singBtn");
-const danceBtn = document.querySelector("#danceBtn");
-const mySubmit = document.querySelector("#mySubmit");
-const outcomeElement = document.querySelector("#outcomeElement");
-const noOutcomeElement = document.querySelector("#noOutcomeElement");
+// const myCheckbox = document.querySelector("#myCheckbox");
+// const swimBtn = document.querySelector("#swimBtn");
+// const drawBtn = document.querySelector("#drawBtn");
+// const readBtn = document.querySelector("#readBtn");
+// const playBtn = document.querySelector("#playBtn");
+// const singBtn = document.querySelector("#singBtn");
+// const danceBtn = document.querySelector("#danceBtn");
+// const mySubmit = document.querySelector("#mySubmit");
+// const outcomeElement = document.querySelector("#outcomeElement");
+// const noOutcomeElement = document.querySelector("#noOutcomeElement");
 
-mySubmit.addEventListener("click",()=>{
-    if(myCheckbox.checked){
-        outcomeElement.textContent = `you are a swimmer`;
-    }
-    else{
-        noOutcomeElement.textContent = `you are not a swimmer`;
-    }
-})
-if(swimBtn.checked){
-    outcomeElement.textContent = `you are a swimmer`;
-}
-else if(drawBtn.checked){
-    outcomeElement.textContent = `you are a drawer`;
-}
-else if(readBtn.checked){
-    outcomeElement.textContent = `you are a reader`;
-}
-else if(playBtn.checked){
-    outcomeElement.textContent = `you are a player`;
-}
-else if(singBtn.checked){
-    outcomeElement.textContent = `you are a singer`;
-}
-else if(danceBtn.checked){
-    outcomeElement.textContent = `you are a dancer`;
+// mySubmit.addEventListener("click",()=>{
+//     if(myCheckbox.checked){
+//         outcomeElement.textContent = `you are a swimmer`;
+//     }
+//     else{
+//         noOutcomeElement.textContent = `you are not a swimmer`;
+//     }
+// })
+// if(swimBtn.checked){
+//     outcomeElement.textContent = `you are a swimmer`;
+// }
+// else if(drawBtn.checked){
+//     outcomeElement.textContent = `you are a drawer`;
+// }
+// else if(readBtn.checked){
+//     outcomeElement.textContent = `you are a reader`;
+// }
+// else if(playBtn.checked){
+//     outcomeElement.textContent = `you are a player`;
+// }
+// else if(singBtn.checked){
+//     outcomeElement.textContent = `you are a singer`;
+// }
+// else if(danceBtn.checked){
+//     outcomeElement.textContent = `you are a dancer`;
+// }
+// else{
+//     noOutcomeElement.textContent = `you are not a hobbyist`;
+// }
+
+// strimg methods = allow you to manipulate and work with text(strings)
+let userName = "BroCode    ";
+//console.log(userName.charAt(0));
+//console.log(userName.indexOf("o"));
+// console.log(userName.lastIndexOf("o"));
+// console.log(userName.length);
+
+// userName = userName.trim();
+// console.log(userName);
+
+// userName = userName.toUpperCase();
+// userName = userName.toLowerCase();
+// userName = userName.replace("o","a");
+// userName = userName.substring(0,3);
+// userName = userName.concat(" is a good boy");
+// userName = userName.indexOf("good");
+// userName = userName.split(" ");
+// userName = userName.replaceAll("a","o");
+// userName = userName.repeat(3);
+// userName = userName.trimStart();
+// userName = userName.trimEnd();
+// userName = userName.trimStart();
+// console.log(userName);
+
+let result = userName.startsWith(" ");
+console.log(result);
+
+if(result){
+    console.log("your username cant begin wth ' '");
 }
 else{
-    noOutcomeElement.textContent = `you are not a hobbyist`;
+    console.log(" userName");
 }
-        
+
+let result2 = userName.endsWith(" ");
+console.log(result2);
+
+if (result2){
+    console.log("your username cant end with ' '");
+}
+else{
+    console.log("userName");
+}
 
 
+let phoneNumber = "123-456-7890";
+phoneNumber = phoneNumber.replaceAll("-","");
+console.log(phoneNumber);
 
-
-
-
-
+phoneNumber = phoneNumber.padStart(10,"1");
+console.log(phoneNumber);
+phoneNummber = phoneNumber.padEnd(10,"1");
+console.log(phoneNumber);
 
 
 
