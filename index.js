@@ -624,27 +624,57 @@
 // CALLING ONE METHOD AFTER ANOTHER IN A CHAIN
 
 //  NO METHOD CHAINING
-let userName = window.prompt("enter your userName: ");
+// let userName = window.prompt("enter your userName: ");
 
-userName= userName.trim();
-let letter = userName.charAt(0);
-letter = letter.toUpperCase();
+// userName= userName.trim();
+// let letter = userName.charAt(0);
+// letter = letter.toUpperCase();
 
-let extraChars = userName.slice(1);
-extraChars = extraChars.toLowerCase();
-userName = letter + extraChars;
-console.log(userName);
+// let extraChars = userName.slice(1);
+// extraChars = extraChars.toLowerCase();
+// userName = letter + extraChars;
+// console.log(userName);
 
-// METHOD CHAINING
-userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
-console.log(userName);
-
-
+// // METHOD CHAINING
+// userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+// console.log(userName);
 
 
+// JS LOGICAL OPERATORS used to combine or manipulate boolean values (true or false)
+// && AND
+// || OR
+// ! NOT
+let temp = 15;
+if(temp > 0 && temp < 30){
+    console.log("the weather is good");
 
+}
 
+const temp2=20;
+if (temp>0){
+    console.log("its warm outside");
+}
+else if(temp<=0){
+    console.log("its cold outside");
+}
+else{
+    console.log("its freezing outside");
+}
 
+let temp3 = 15;
+// || or operator
+if(temp > 0 || temp < 30){
+    console.log("the weather is good");
+}
+
+const isSunny  = true;
+// ! not operator
+if(!isSunny){
+    console.log("its cloudy outside");
+}
+else{
+    console.log("its sunny outside");
+}
 
 
 
