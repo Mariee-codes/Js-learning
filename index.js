@@ -677,12 +677,37 @@ else{
 }
 
 
+// STRICT EQUALITY OPERATOR
+// = assignment operator
+// == equality operator(comparison operator)
+// === strict equality operator
+// != inequality opertaor
+// !== strict inequality opertaor
 
+// equality operator
+const PI = 3.14;
+if(PI == "3.14"){
+console.log("that is PI");
+}
+else{
+    console.log("that is not PI");
+}
+// strict equality operator
+const PI2 = 3.14;
+if(PI2 === "3.14"){
+console.log("that is PI");
+}
+else{
+    console.log("that is not PI");
+}
 
-
-
-
-
+const PI3 = 3.14;
+if(PI3 != "3.14"){
+console.log("that is  not PI");
+}
+else{
+    console.log("that is not PI");
+}
 
 
 
