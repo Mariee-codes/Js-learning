@@ -644,81 +644,129 @@
 // && AND
 // || OR
 // ! NOT
-let temp = 15;
-if(temp > 0 && temp < 30){
-    console.log("the weather is good");
+// let temp = 15;
+// if(temp > 0 && temp < 30){
+//     console.log("the weather is good");
 
+// }
+
+// const temp2=20;
+// if (temp>0){
+//     console.log("its warm outside");
+// }
+// else if(temp<=0){
+//     console.log("its cold outside");
+// }
+// else{
+//     console.log("its freezing outside");
+// }
+
+// let temp3 = 15;
+// // || or operator
+// if(temp > 0 || temp < 30){
+//     console.log("the weather is good");
+// }
+
+// const isSunny  = true;
+// // ! not operator
+// if(!isSunny){
+//     console.log("its cloudy outside");
+// }
+// else{
+//     console.log("its sunny outside");
+// }
+
+
+// // STRICT EQUALITY OPERATOR
+// // = assignment operator
+// // == equality operator(comparison operator)
+// // === strict equality operator
+// // != inequality opertaor
+// // !== strict inequality opertaor
+
+// // equality operator
+// const PI = 3.14;
+// if(PI == "3.14"){
+// console.log("that is PI");
+// }
+// else{
+//     console.log("that is not PI");
+// }
+// // strict equality operator
+// const PI2 = 3.14;
+// if(PI2 === "3.14"){
+// console.log("that is PI");
+// }
+// else{
+//     console.log("that is not PI");
+// }
+
+// const PI3 = 3.14;
+// if(PI3 != "3.14"){
+// console.log("that is  not PI");
+// }
+// else{
+//     console.log("that is not PI");
+// }
+
+
+
+
+// // WHILE LOOP repeat some code while some comditon is true
+let userName = "MarieCode";
+while (userName === ""){
+    console.log(`enter your userName`);
+}
+ 
+console.log(`Hello ${userName}`);
+
+let userName2 = " ";
+while(userName2 === " "){
+    userName2 = window.prompt("enter your userName");
+}
+console.log(`Hello ${userName2}`);
+// while (userName ==="" || userName == null){
+
+
+// do while loop = do something once, then repeat if condition is true
+let username;
+do{
+    username = window.prompt("enter your username");
+ } while(username ==="" || username === null)
+console.log(`Hello ${username}`);
+
+let loggedIn = false;
+let userName3;
+let password;
+
+while(!loggedIn){
+    userName3 = window.prompt("enter your username");
+    password = window.prompt("enter your password");
+    if(userName3 === "myUsername" && password === "myPassword"){
+        loggedIn = true;
+        console.log("you are logged in");
+    }
+    else{
+        console.log("incorrect username or password");
+    }
 }
 
-const temp2=20;
-if (temp>0){
-    console.log("its warm outside");
-}
-else if(temp<=0){
-    console.log("its cold outside");
-}
-else{
-    console.log("its freezing outside");
-}
 
-let temp3 = 15;
-// || or operator
-if(temp > 0 || temp < 30){
-    console.log("the weather is good");
-}
+let loggedIn1 = true;
+let userName4;
+let password1;
 
-const isSunny  = true;
-// ! not operator
-if(!isSunny){
-    console.log("its cloudy outside");
-}
-else{
-    console.log("its sunny outside");
-}
-
-
-// STRICT EQUALITY OPERATOR
-// = assignment operator
-// == equality operator(comparison operator)
-// === strict equality operator
-// != inequality opertaor
-// !== strict inequality opertaor
-
-// equality operator
-const PI = 3.14;
-if(PI == "3.14"){
-console.log("that is PI");
-}
-else{
-    console.log("that is not PI");
-}
-// strict equality operator
-const PI2 = 3.14;
-if(PI2 === "3.14"){
-console.log("that is PI");
-}
-else{
-    console.log("that is not PI");
-}
-
-const PI3 = 3.14;
-if(PI3 != "3.14"){
-console.log("that is  not PI");
-}
-else{
-    console.log("that is not PI");
-}
-
-
-
-
-
-
-
-
-
-
-
+do{
+    userName4 = window.prompt("enter your username");
+    password1 = window.prompt("enter your password");
+    if(userName4 === "myUsername" && password1 === "myPassword"){
+        loggedIn1 = true;
+        console.log("you are logged in");
+    }
+    else{
+        console.log("incorrect username or password");
+    }
+} while(!loggedIn1);
 
 
 
