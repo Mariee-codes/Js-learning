@@ -842,20 +842,56 @@
 
 
 // FUNCTIONS = A section of reusable code .declare code once, use it whenever you want .call the function to execute that code
-function happyBirthday(username,age){
-// parameters = are the values passed to the function when it is declared
-    console.log("happy birthday to you");
-    console.log("happy birthday to you");
-    console.log(`happy birthday dear ${username}`);
-    console.log("happy birthday to you");
-    console.log(`you are ${age} years old`);
+// function happyBirthday(username,age){
+// // parameters = are the values passed to the function when it is declared
+//     console.log("happy birthday to you");
+//     console.log("happy birthday to you");
+//     console.log(`happy birthday dear ${username}`);
+//     console.log("happy birthday to you");
+//     console.log(`you are ${age} years old`);
+// }
+// happyBirthday("MarieCode",20); 
+// happyBirthday("John",30);
+// // arguments = are the values passed to the function when it is called
+
+
+function add(x,y){
+    return  x + y;
 }
-happyBirthday("MarieCode",20); 
-happyBirthday("John",30);
-// arguments = are the values passed to the function when it is called
-
-
-
+function subtract(x,y){
+    return  x - y;
+    
+}
+function multiply(x,y){
+    return  x * y;
+}
+function divide(x,y){
+    return  x / y;
+}
+function modulo(x,y){
+    return  x % y;
+}
+function isEven(number){
+    // return number %2 === 0 ? true : false; ternary operator
+    if(number % 2 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+    function isValidEmail(email){
+        if(email.includes("@") && email.includes(".")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    // return email.inludes("@") && email.includes(".")? true : false; ternary operator
+}
+console.log(isValidEmail("marie@gmail.com"));
+// let answer = add(2,3);
+// console.log(answer);
 
 
 
