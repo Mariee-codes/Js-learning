@@ -907,20 +907,42 @@
 // function1();
 // function2();
 
-let x = 3;
-// global variable
+// let x = 3;
+// // global variable
 
-function function1(){
-    console.log(x);
+// function function1(){
+//     console.log(x);
+// }
+// function1();
+
+// function function2(){
+//     console.log(x);
+// }
+// function2();
+
+// TEMPERATURE CONVERSION PROGRAM
+const textBox = document.getElementById("textBox");
+const toFahrenheit = document.getElementById("toFahrenheit");
+const toCelcius = document.getElementById("toCelcius");
+const result = document.getElementById("result");
+let temp;
+
+function convert(){
+    if(toFahrenheit.checked){
+        temp =Number(textBox.value);
+        temp = temp * 9/5 + 32;
+        result.textContent = temp.toFixed(1) + "°F";
+    }
+    else if(toCelcius.checked){
+         temp = Number(textBox.value);
+         temp = (temp - 32) * 5/9;
+         result.textContent = temp.toFixed() + "°C";
+    }
+    else{
+        result.textContent = "Select a unit";
+    }
+
 }
-function1();
-
-function function2(){
-    console.log(x);
-}
-function2();
-
-
 
 
 
