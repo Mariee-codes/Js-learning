@@ -855,46 +855,57 @@
 // // arguments = are the values passed to the function when it is called
 
 
-function add(x,y){
-    return  x + y;
-}
-function subtract(x,y){
-    return  x - y;
+// function add(x,y){
+//     return  x + y;
+// }
+// function subtract(x,y){
+//     return  x - y;
     
-}
-function multiply(x,y){
-    return  x * y;
-}
-function divide(x,y){
-    return  x / y;
-}
-function modulo(x,y){
-    return  x % y;
-}
-function isEven(number){
-    // return number %2 === 0 ? true : false; ternary operator
-    if(number % 2 === 0){
-        return true;
-    }
-    else{
-        return false;
-    }
-    function isValidEmail(email){
-        if(email.includes("@") && email.includes(".")){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    // return email.inludes("@") && email.includes(".")? true : false; ternary operator
-}
-console.log(isValidEmail("marie@gmail.com"));
-// let answer = add(2,3);
-// console.log(answer);
+// }
+// function multiply(x,y){
+//     return  x * y;
+// }
+// function divide(x,y){
+//     return  x / y;
+// }
+// function modulo(x,y){
+//     return  x % y;
+// }
+// function isEven(number){
+//     // return number %2 === 0 ? true : false; ternary operator
+//     if(number % 2 === 0){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+//     function isValidEmail(email){
+//         if(email.includes("@") && email.includes(".")){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     }
+//     // return email.inludes("@") && email.includes(".")? true : false; ternary operator
+// }
+// console.log(isValidEmail("marie@gmail.com"));
+// // let answer = add(2,3);
+// // console.log(answer);
 
 
-
+// VARIABLE SCOPE - where a variable is recognized and accesible(local and global)
+function function1(){
+    let x = 1;
+    console.log(x);
+}
+function function2(){
+    // local variable
+    let x = 2;
+    console.log(x);
+}
+function1();
+function2();
 
 
 
