@@ -713,67 +713,97 @@
 
 
 // // WHILE LOOP repeat some code while some comditon is true
-let userName = "MarieCode";
-while (userName === ""){
-    console.log(`enter your userName`);
-}
+// let userName = "MarieCode";
+// while (userName === ""){
+//     console.log(`enter your userName`);
+// }
  
-console.log(`Hello ${userName}`);
+// console.log(`Hello ${userName}`);
 
-let userName2 = " ";
-while(userName2 === " "){
-    userName2 = window.prompt("enter your userName");
+// let userName2 = " ";
+// while(userName2 === " "){
+//     userName2 = window.prompt("enter your userName");
+// }
+// console.log(`Hello ${userName2}`);
+// // while (userName ==="" || userName == null){
+
+
+// // do while loop = do something once, then repeat if condition is true
+// let username;
+// do{
+//     username = window.prompt("enter your username");
+//  } while(username ==="" || username === null)
+// console.log(`Hello ${username}`);
+
+// let loggedIn = false;
+// let userName3;
+// let password;
+
+// while(!loggedIn){
+//     userName3 = window.prompt("enter your username");
+//     password = window.prompt("enter your password");
+//     if(userName3 === "myUsername" && password === "myPassword"){
+//         loggedIn = true;
+//         console.log("you are logged in");
+//     }
+//     else{
+//         console.log("incorrect username or password");
+//     }
+// }
+
+
+// let loggedIn1 = true;
+// let userName4;
+// let password1;
+
+// do{
+//     userName4 = window.prompt("enter your username");
+//     password1 = window.prompt("enter your password");
+//     if(userName4 === "myUsername" && password1 === "myPassword"){
+//         loggedIn1 = true;
+//         console.log("you are logged in");
+//     }
+//     else{
+//         console.log("incorrect username or password");
+//     }
+// } while(!loggedIn1);
+
+
+// FOR LOOP _ Repeat some code for a limited amount of time
+for(let i = 0; i <= 2; i++){
+    console.log("Hello");
 }
-console.log(`Hello ${userName2}`);
-// while (userName ==="" || userName == null){
 
+for(let i = 0; i <= 2; i++){
+    console.log(i);
+}
 
-// do while loop = do something once, then repeat if condition is true
-let username;
-do{
-    username = window.prompt("enter your username");
- } while(username ==="" || username === null)
-console.log(`Hello ${username}`);
+for (let i = 0; i<= 10; i+=2){
+console.log(i);
+}
 
-let loggedIn = false;
-let userName3;
-let password;
+for (let i = 10; i>= 0; i-=2){
+    console.log(i);
+}
+console.log("Happy New Year");
 
-while(!loggedIn){
-    userName3 = window.prompt("enter your username");
-    password = window.prompt("enter your password");
-    if(userName3 === "myUsername" && password === "myPassword"){
-        loggedIn = true;
-        console.log("you are logged in");
+for(let i = 1; i<= 20; i++){
+    if(i == 13){
+        continue;
     }
     else{
-        console.log("incorrect username or password");
+        console.log(i);
     }
 }
 
-
-let loggedIn1 = true;
-let userName4;
-let password1;
-
-do{
-    userName4 = window.prompt("enter your username");
-    password1 = window.prompt("enter your password");
-    if(userName4 === "myUsername" && password1 === "myPassword"){
-        loggedIn1 = true;
-        console.log("you are logged in");
+for(let i = 1; i<= 20; i++){
+    if(i == 13){
+        break;
     }
     else{
-        console.log("incorrect username or password");
+        console.log(i);
     }
-} while(!loggedIn1);
-
-
-
-
-
-
-
+}
 
 
 
