@@ -806,42 +806,53 @@
 // }
 
 // NUMBER GUESSING GAME
-const minNum =1;
-const maxNum = 100;
-const answer = 
-Math.floor(Math.random() * (maxNum - minNum +1)) +minNum;
-console.log(answer);
+// const minNum =1;
+// const maxNum = 100;
+// const answer = 
+// Math.floor(Math.random() * (maxNum - minNum +1)) +minNum;
+// console.log(answer);
 
-let attempts = 0;
-let guess;
-let running = true;
-while(running){
-guess = window.prompt(`guess a number between ${minNum} - ${maxNum}`);
-guess = Number(guess);}
+// let attempts = 0;
+// let guess;
+// let running = true;
+// while(running){
+// guess = window.prompt(`guess a number between ${minNum} - ${maxNum}`);
+// guess = Number(guess);}
 
-if(isNaN(guess)){
-    window.alert("please enter a valid number");
+// if(isNaN(guess)){
+//     window.alert("please enter a valid number");
     
-      if(guess< minNum || guess > maxNum ){
-        window.alert("please enter a valid number");
-    }
-    else{
-        attempts++;
-        if(guess < answer){
-            window.alert("too low");
-        }
-        else if(guess > answer){
-            window.alert("too high");
-        }
-        else{
-            window.alert(`CORRECT! The answer was ${answer} . It took you ${attempts} attempts`);
-            running = false;
-        }
-    }}
-// console.log(typeof guess, guess);
+//       if(guess< minNum || guess > maxNum ){
+//         window.alert("please enter a valid number");
+//     }
+//     else{
+//         attempts++;
+//         if(guess < answer){
+//             window.alert("too low");
+//         }
+//         else if(guess > answer){
+//             window.alert("too high");
+//         }
+//         else{
+//             window.alert(`CORRECT! The answer was ${answer} . It took you ${attempts} attempts`);
+//             running = false;
+//         }
+//     }}
+// // console.log(typeof guess, guess);
 
 
-
+// FUNCTIONS = A section of reusable code .declare code once, use it whenever you want .call the function to execute that code
+function happyBirthday(username,age){
+// parameters = are the values passed to the function when it is declared
+    console.log("happy birthday to you");
+    console.log("happy birthday to you");
+    console.log(`happy birthday dear ${username}`);
+    console.log("happy birthday to you");
+    console.log(`you are ${age} years old`);
+}
+happyBirthday("MarieCode",20); 
+happyBirthday("John",30);
+// arguments = are the values passed to the function when it is called
 
 
 
