@@ -947,9 +947,26 @@
 // JAVASCRIPT ARRAYS = a variable structure that can hold more than 1 value
 let fruits = ["apple", "orange", "banana", "pear"];
 
-fruits[1] = "coconut";
-fruits.push("coconut");
+// fruits[1] = "coconut";
+// fruits.push("coconut");
 // add to the end of the array
+// fruits.pop();
+// remove from the end of the array
+fruits.shift();
+// remove from the beginning of the array
+fruits.unshift("mango");
+// add to the beginning of the array
+fruits.length;
+// get the length of the array
+fruits.indexOf("banana");
+// get the index of the value
+fruits.sort();
+// sort the array
+fruits.reverse();
+// reverse the array
+fruits.slice(1,3);
+// get a subset of the array
+
 
 console.log(fruits[0]);
 console.log(fruits[1]);
