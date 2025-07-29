@@ -996,41 +996,55 @@
 
 
 // 2D ARRAYS = multidimensional array that stores a matrix of data in rows and columns .useful for games, spreadsheets or reperesenting images.
-const matrix =[[1,2,3],
-             [4,5,6],
-             [7,8,9]
-            ['*',0,'#']];
+// const matrix =[[1,2,3],
+//              [4,5,6],
+//              [7,8,9]
+//             ['*',0,'#']];
 
 
 
-for (let row of matrix){
-    //console.log(row);
-    matrix[0][0] = "x";
-    matrix[0][1] = "o";
-    matrix[0][2] = "x";
+// for (let row of matrix){
+//     //console.log(row);
+//     matrix[0][0] = "x";
+//     matrix[0][1] = "o";
+//     matrix[0][2] = "x";
 
-    matrix[1][0] = "o";
-    matrix[1][1] = "x";
-    matrix[1][2] = "o";
+//     matrix[1][0] = "o";
+//     matrix[1][1] = "x";
+//     matrix[1][2] = "o";
 
-    matrix[2][0] = "x";
-    matrix[2][1] = "o";
-    matrix[2][2] = "x";
+//     matrix[2][0] = "x";
+//     matrix[2][1] = "o";
+//     matrix[2][2] = "x";
 
 
-    const rowString = row.join(" ");
-    console.log(rowString);
-}
-// console.log(matrix[0][0]);
-// console.log(matrix[0][1]);
-// console.log(matrix[0][2]);
-// console.log(matrix[1][0]);
+//     const rowString = row.join(" ");
+//     console.log(rowString);
+// }
+// // console.log(matrix[0][0]);
+// // console.log(matrix[0][1]);
+// // console.log(matrix[0][2]);
+// // console.log(matrix[1][0]);
 // console.log(matrix[1][1]);
 // console.log(matrix[1][2]);
 
+// SPREAD OPERATOR = allows an iterable to be expanded in places where zero or more arguments are expected.
 
+let numbers = [1,2,3,4,5];
+let maxiNum = Math.max(...numbers);
+let miniNum = Math.min(...numbers);
+console.log(maxiNum);
+console.log(miniNum);
 
+let userName = "marie";
+let letters = [...userName].join("-");
+console.log(letters);
 
+//let fruits =["apple","orange","banana","pear"];
+let fruits = ["apple","orange","banana","pear"];
+let vegetables = ["carrot","potato","onion","tomato"];
+let foods = [...fruits,...vegetables];
+console.log(...foods);
 
 
 
