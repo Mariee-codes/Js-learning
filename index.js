@@ -945,9 +945,9 @@
 // }
 
 // JAVASCRIPT ARRAYS = a variable structure that can hold more than 1 value
-let fruits = ["apple", "orange", "banana", "pear"];
+// let fruits = ["apple", "orange", "banana", "pear"];
 
-// fruits[1] = "coconut";
+// // fruits[1] = "coconut";
 // fruits.push("coconut");
 // add to the end of the array
 // fruits.pop();
@@ -974,31 +974,59 @@ let fruits = ["apple", "orange", "banana", "pear"];
 // console.log(fruits[3]);
 // console.log(fruits[4]);
 
-let numOfFruits = fruits.length;
-let index = fruits.indexOf("banana");
-console.log(numOfFruits);
-console.log(index);
+// let numOfFruits = fruits.length;
+// let index = fruits.indexOf("banana");
+// console.log(numOfFruits);
+// console.log(index);
 
-for (let i = 0; i < fruits.length; i++){
-    console.log(fruits[i]);
+// for (let i = 0; i < fruits.length; i++){
+//     console.log(fruits[i]);
+// }
+
+// for(i= fruits.length; i>=0; i--){
+//     console.log(fruits[i]);
+// }
+
+// for(fruit of fruits){
+//     console.log(fruit);
+// }
+
+// fruits.sort();
+// fruits.sort().reverse();
+
+
+// 2D ARRAYS = multidimensional array that stores a matrix of data in rows and columns .useful for games, spreadsheets or reperesenting images.
+const matrix =[[1,2,3],
+             [4,5,6],
+             [7,8,9]
+            ['*',0,'#']];
+
+
+
+for (let row of matrix){
+    //console.log(row);
+    matrix[0][0] = "x";
+    matrix[0][1] = "o";
+    matrix[0][2] = "x";
+
+    matrix[1][0] = "o";
+    matrix[1][1] = "x";
+    matrix[1][2] = "o";
+
+    matrix[2][0] = "x";
+    matrix[2][1] = "o";
+    matrix[2][2] = "x";
+
+
+    const rowString = row.join(" ");
+    console.log(rowString);
 }
-
-for(i= fruits.length; i>=0; i--){
-    console.log(fruits[i]);
-}
-
-for(fruit of fruits){
-    console.log(fruit);
-}
-
-fruits.sort();
-fruits.sort().reverse();
-
-
-
-
-
-
+// console.log(matrix[0][0]);
+// console.log(matrix[0][1]);
+// console.log(matrix[0][2]);
+// console.log(matrix[1][0]);
+// console.log(matrix[1][1]);
+// console.log(matrix[1][2]);
 
 
 
