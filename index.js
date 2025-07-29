@@ -952,32 +952,47 @@ let fruits = ["apple", "orange", "banana", "pear"];
 // add to the end of the array
 // fruits.pop();
 // remove from the end of the array
-fruits.shift();
-// remove from the beginning of the array
-fruits.unshift("mango");
-// add to the beginning of the array
-fruits.length;
-// get the length of the array
-fruits.indexOf("banana");
-// get the index of the value
+// fruits.shift();
+// // remove from the beginning of the array
+// fruits.unshift("mango");
+// // add to the beginning of the array
+// fruits.length;
+// // get the length of the array
+// fruits.indexOf("banana");
+// // get the index of the value
+// fruits.sort();
+// // sort the array
+// fruits.reverse();
+// // reverse the array
+// fruits.slice(1,3);
+// // get a subset of the array
+
+
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[2]);
+// console.log(fruits[3]);
+// console.log(fruits[4]);
+
+let numOfFruits = fruits.length;
+let index = fruits.indexOf("banana");
+console.log(numOfFruits);
+console.log(index);
+
+for (let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+}
+
+for(i= fruits.length; i>=0; i--){
+    console.log(fruits[i]);
+}
+
+for(fruit of fruits){
+    console.log(fruit);
+}
+
 fruits.sort();
-// sort the array
-fruits.reverse();
-// reverse the array
-fruits.slice(1,3);
-// get a subset of the array
-
-
-console.log(fruits[0]);
-console.log(fruits[1]);
-console.log(fruits[2]);
-console.log(fruits[3]);
-console.log(fruits[4]);
-
-
-
-
-
+fruits.sort().reverse();
 
 
 
