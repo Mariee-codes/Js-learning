@@ -1065,36 +1065,36 @@
 // const foods = getFood(food1,food2,food3,food4,food5);
 // console.log(foods);
 
-function sum(...numbers){
-    let result = 0;
-    for(let number of numbers){
-        result += number;
-    }
-    return result;
-}
-const total = sum(1,2,3,4);
-console.log(`your total is $${total}`);
+// function sum(...numbers){
+//     let result = 0;
+//     for(let number of numbers){
+//         result += number;
+//     }
+//     return result;
+// }
+// const total = sum(1,2,3,4);
+// console.log(`your total is $${total}`);
 
-function getAverage(...numbers){
-    let result = 0;
-    for(let number of numbers){
-        result += number;
-    }
-    return result / numbers.length;
-}
-const total1 = getAverage(100,20,37,49,58);
-console.log(total);
-
-
-
-function combineStrings(...strings){
-    return strings.join(" ");
-}
-const fullName = combineStrings("Mr.","John","Doe","111");
-console.log(fullName);
+// function getAverage(...numbers){
+//     let result = 0;
+//     for(let number of numbers){
+//         result += number;
+//     }
+//     return result / numbers.length;
+// }
+// const total1 = getAverage(100,20,37,49,58);
+// console.log(total);
 
 
 
+// function combineStrings(...strings){
+//     return strings.join(" ");
+// }
+// const fullName = combineStrings("Mr.","John","Doe","111");
+// console.log(fullName);
+
+
+// JAVASCRIPT DICE ROLLER PROGRAM
 
 
 
