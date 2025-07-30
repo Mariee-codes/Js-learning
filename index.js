@@ -1030,24 +1030,40 @@
 
 // SPREAD OPERATOR = allows an iterable to be expanded in places where zero or more arguments are expected.
 
-let numbers = [1,2,3,4,5];
-let maxiNum = Math.max(...numbers);
-let miniNum = Math.min(...numbers);
-console.log(maxiNum);
-console.log(miniNum);
+// let numbers = [1,2,3,4,5];
+// let maxiNum = Math.max(...numbers);
+// let miniNum = Math.min(...numbers);
+// console.log(maxiNum);
+// console.log(miniNum);
 
-let userName = "marie";
-let letters = [...userName].join("-");
-console.log(letters);
+// let userName = "marie";
+// let letters = [...userName].join("-");
+// console.log(letters);
 
-//let fruits =["apple","orange","banana","pear"];
-let fruits = ["apple","orange","banana","pear"];
-let vegetables = ["carrot","potato","onion","tomato"];
-let foods = [...fruits,...vegetables];
-console.log(...foods);
+// //let fruits =["apple","orange","banana","pear"];
+// let fruits = ["apple","orange","banana","pear"];
+// let vegetables = ["carrot","potato","onion","tomato"];
+// let foods = [...fruits,...vegetables];
+// console.log(...foods);
 
 
+// jAVASCRIPT REST PARAMETERS
+function openFridge(...foods){
+    console.log(...foods);
+}
+function getFood(...foods){
+    return foods;
+}
 
+    const food1 = "pizza";
+    const food2 = "hamburger";
+    const food3 = "hotdog";
+    const food4 = "sushi";
+    const food5 = "ramen";
+
+//openFridge(food1,food2,food3,food4,food5);
+const foods = getFood(food1,food2,food3,food4,food5);
+console.log(foods);
 
 
 
