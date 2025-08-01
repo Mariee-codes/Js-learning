@@ -1166,14 +1166,22 @@
 // used to handle asynchronous operations:
 // reading a file, network requests and interacting with databases."hey,when youre done call this next"
 
-hello();
-goodbye();
-function hello(){
-    setTimeout(function(){
+hello(wait);
+//goodbye();
+function hello(callback){
+    //setTimeout(function(){
         console.log("hello");
-    }, 3000);
-    
+        callback();
 }
+
+    function leave(){
+        console.log("leave");
+    }
+   // }, 3000);
+    function wait(){
+        console.log("wait")
+    }
+
 function goodbye(){
     console.log("goodbye");
 }
