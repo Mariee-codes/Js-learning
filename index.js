@@ -1115,54 +1115,65 @@
 // }
 
 //RANDOM PASSWORD GENERATOR
-function generatePassword(length,includeLowercase,includeUppercase,includeNumbers,includeSymbols){
-    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const numberChars = "0123456789"
-    const symbolChars ="!@#$%^&*()-+";
+// function generatePassword(length,includeLowercase,includeUppercase,includeNumbers,includeSymbols){
+//     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+//     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//     const numberChars = "0123456789"
+//     const symbolChars ="!@#$%^&*()-+";
 
-    let allowedChars= " ";
-    let password = " ";
+//     let allowedChars= " ";
+//     let password = " ";
 
-    allowedChars += includeLowercase? lowercaseChars : " ";
-    allowedChars += includeUppercase? uppercaseChars : " ";
-    allowedChars += includeNumbers ?  numberChars : " ";
-    allowedChars += includeSymbols ? symbolChars : " ";
-
-
-    if(length<= 0){
-        return `(password length must be at least 1)`;
-    }
-    if(allowedChars.length === 0){
-        return `(At least 1 set of character needs to be selected)`;
-    }
-
-    for(let i=0; i<length; i++){
-        const randomIndex = Math.floor(Math.random() * allowedChars.length);
-        password += allowedChars[randomIndex];
-    }
+//     allowedChars += includeLowercase? lowercaseChars : " ";
+//     allowedChars += includeUppercase? uppercaseChars : " ";
+//     allowedChars += includeNumbers ?  numberChars : " ";
+//     allowedChars += includeSymbols ? symbolChars : " ";
 
 
-   // console.log(allowedChars);
-return password;
-}
+//     if(length<= 0){
+//         return `(password length must be at least 1)`;
+//     }
+//     if(allowedChars.length === 0){
+//         return `(At least 1 set of character needs to be selected)`;
+//     }
+
+//     for(let i=0; i<length; i++){
+//         const randomIndex = Math.floor(Math.random() * allowedChars.length);
+//         password += allowedChars[randomIndex];
+//     }
 
 
-const passwordLength = 12;
-const includeLowercase = true;
-const includeUppercase = true;
-const includeNumbers = true;
-const includeSymbols = true;
+//    // console.log(allowedChars);
+// return password;
+// }
 
-const password =generatePassword(passwordLength,
-                                 includeLowercase,
-                                includeUppercase,
-                                includeNumbers,
-                                includeSymbols);
+
+// const passwordLength = 12;
+// const includeLowercase = true;
+// const includeUppercase = true;
+// const includeNumbers = true;
+// const includeSymbols = true;
+
+// const password =generatePassword(passwordLength,
+//                                  includeLowercase,
+//                                 includeUppercase,
+//                                 includeNumbers,
+//                                 includeSymbols);
                             
-console.log(`Generated Password:${password}`);
+// console.log(`Generated Password:${password}`);
 
+// callback = a function that is passed as an argument to another function.
+// used to handle asynchronous operations:
+// reading a file, network requests and interacting with databases."hey,when youre done call this next"
 
+hello();
+goodbye();
+function hello(){
+    console.log("hello");
+}
+function goodbye(){
+    console.log("goodbye");
+}
 
 
 
