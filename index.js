@@ -1169,7 +1169,10 @@
 hello();
 goodbye();
 function hello(){
-    console.log("hello");
+    setTimeout(function(){
+        console.log("hello");
+    }, 3000);
+    
 }
 function goodbye(){
     console.log("goodbye");
