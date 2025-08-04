@@ -1166,45 +1166,69 @@
 // used to handle asynchronous operations:
 // reading a file, network requests and interacting with databases."hey,when youre done call this next"
 
-hello(wait);
-//goodbye();
-function hello(callback){
-    //setTimeout(function(){
-        console.log("hello");
-        callback();
+// hello(wait);
+// //goodbye();
+// function hello(callback){
+//     //setTimeout(function(){
+//         console.log("hello");
+//         callback();
+// }
+
+//     function leave(){
+//         console.log("leave");
+//     }
+//    // }, 3000);
+//     function wait(){
+//         console.log("wait")
+//     }
+
+// function goodbye(){
+//     console.log("goodbye");
+// }
+
+
+
+
+// sum(displayPage, 1,2);
+// function sum(callback, x, y){
+//     let result = x + y;
+//     callback(result);
+// }
+// function displayConsole(result){
+//     console.log(result);
+// }
+
+// function displayPage(result){
+//     document.getElementById("myH1").textContent = result;
+// }
+
+// FOR EACH METHOD
+let numbers = [1,2,3,4,5];
+
+numbers.forEach(double);
+numbers.forEach(display);
+numbers.forEach(tripple);
+numbers.forEach(square);
+numbers.forEach(cube);
+
+
+function double(element,index,array){
+    array[index] = element *2;
 }
 
-    function leave(){
-        console.log("leave");
-    }
-   // }, 3000);
-    function wait(){
-        console.log("wait")
-    }
-
-function goodbye(){
-    console.log("goodbye");
+function tripple(element,index,array){
+    array[index] = element *3;
+    
 }
-
-
-
-
-sum(displayPage, 1,2);
-function sum(callback, x, y){
-    let result = x + y;
-    callback(result);
+function display(element){
+    console.log(element);
 }
-function displayConsole(result){
-    console.log(result);
+function square(element,index,array){
+array[index] = Math.pow(element, 2);
 }
-
-function displayPage(result){
-    document.getElementById("myH1").textContent = result;
+function cube(element){
+    array[index]= Math.pow(element,3);
 }
-
-
-
-
 
 
 
