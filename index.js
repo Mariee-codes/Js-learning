@@ -1249,7 +1249,7 @@
 // JS MAPPING METHODS
 const numbers = [1,2,3,4,5];
 const squares = numbers.map(square);
-const cubes = numbers.map(cubes);
+//const cubes = numbers.map(cubes);
 
 console.log(squares);
 console.log(cube);
@@ -1262,9 +1262,20 @@ function cube(element){
    return Math.pow(element, 3)
 }
 
+const students= ["spongebob","pstrick","squidward","plankton"];
+const studentUpper = students.map(uppercase);
+const studentLower = students.map(lowerCase);
 
+console.log(studentUpper);
+console.log(studentLower);
 
+function uppercase(element){
+    return element.toUpperCase();
+}
 
+function lowerCase(element){
+    return element.toLowerCase();
+}
 
 
 
