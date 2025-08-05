@@ -1247,49 +1247,92 @@
 // }
 
 // JS MAPPING METHODS
-const numbers = [1,2,3,4,5];
-const squares = numbers.map(square);
-//const cubes = numbers.map(cubes);
+// const numbers = [1,2,3,4,5];
+// const squares = numbers.map(square);
+// //const cubes = numbers.map(cubes);
 
-console.log(squares);
-console.log(cube);
+// console.log(squares);
+// console.log(cube);
 
-function square(element){
-    return Math.pow(element,2)
+// function square(element){
+//     return Math.pow(element,2)
+// }
+
+// function cube(element){
+//    return Math.pow(element, 3)
+// }
+
+// const students= ["spongebob","pstrick","squidward","plankton"];
+// const studentUpper = students.map(uppercase);
+// const studentLower = students.map(lowerCase);
+
+// console.log(studentUpper);
+// console.log(studentLower);
+
+// function uppercase(element){
+//     return element.toUpperCase();
+// }
+
+// function lowerCase(element){
+//     return element.toLowerCase();
+// }
+
+// const dates = ["2024-1-10","2025-2-20","2026-3-30"];
+// const formattedDates = dates.map(formatDates);
+
+// console.log(formattedDates);
+
+// function formatDates(element){
+//     const parts = element.split("-");
+//     return `${parts[1]}/${parts[2]}/${parts[0]}`;
+// }
+
+
+// .filter() = creates a new array by filtering out elements
+let numbers = [1,2,3,4,5,6,7,8];
+let evenNums = numbers.filter(isEven);
+let oddNums = numbers.filter(isOdd);
+
+console.log(evenNums);
+console.log(oddNums);
+
+function isEven(element){
+    return element % 2 === 0;
+}
+function isOdd(element){
+    return element % 2 !== 0;
 }
 
-function cube(element){
-   return Math.pow(element, 3)
+const ages = [16, 17, 18,18, 19, 20, 60];
+const adults = ages.filter(isAdult);
+const children = ages.filter(isChild);
+
+console.log(adults);
+console.log(children);
+
+function isAdult (element){
+    return element >= 18;
 }
 
-const students= ["spongebob","pstrick","squidward","plankton"];
-const studentUpper = students.map(uppercase);
-const studentLower = students.map(lowerCase);
-
-console.log(studentUpper);
-console.log(studentLower);
-
-function uppercase(element){
-    return element.toUpperCase();
-}
-
-function lowerCase(element){
-    return element.toLowerCase();
-}
-
-const dates = ["2024-1-10","2025-2-20","2026-3-30"];
-const formattedDates = dates.map(formatDates);
-
-console.log(formattedDates);
-
-function formatDates(element){
-    const parts = element.split("-");
-    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+function isChild(element){
+    return element <= 18;
 }
 
 
+const words = ["apple","orange","banana","kiwi","pomegranate","coconut"];
+const shortWords = words.filter(getShortWords);
+const longWords = words.filter(getLongWords);
 
+console.log(shortWords);
+console.log(longWords);
 
+function getShortWords(element){
+    return element.length<= 6;
+}
+
+function getLongWords(element){
+    return element.length >= 6;
+}
 
 
 
