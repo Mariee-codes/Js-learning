@@ -1367,57 +1367,73 @@
 //     console.log("Hello");
 // }, 3000);
 
-const numbers = [1,2,3,4,5,6];
-//const squares = numbers.map(square);
+// const numbers = [1,2,3,4,5,6];
+// //const squares = numbers.map(square);
 
-//console.log(squares);
+// //console.log(squares);
 
-//function square(element){
-   // return Math.pow(element,2);
-//}
-//function declaration
+// //function square(element){
+//    // return Math.pow(element,2);
+// //}
+// //function declaration
 
-//function expression
+// //function expression
 
-const squares = numbers.map(function (element){
-    return Math.pow(element,2);
-});
+// const squares = numbers.map(function (element){
+//     return Math.pow(element,2);
+// });
 
-const cubes = numbers.map(function (element){
-    return Math.pow(element,3);
-}
-)
-
-const evenNums = numbers.filter(function(element) {
-    return element % 2 === 0;
-});
-
-const oddNums = numbers.filter(function(element){
-return element % 2 !== 0
-});
-
-const total = numbers.reduce(function(accumulator,element){
-    return accumulator + element;
-})
-console.log(squares);
-console.log(cubes);
-console.log(evenNums);
-console.log(oddNums);
-
-// function cube(element){
+// const cubes = numbers.map(function (element){
 //     return Math.pow(element,3);
 // }
-function getOdd (element){
-    return element % 2 !== 0;
+// )
+
+// const evenNums = numbers.filter(function(element) {
+//     return element % 2 === 0;
+// });
+
+// const oddNums = numbers.filter(function(element){
+// return element % 2 !== 0
+// });
+
+// const total = numbers.reduce(function(accumulator,element){
+//     return accumulator + element;
+// })
+// console.log(squares);
+// console.log(cubes);
+// console.log(evenNums);
+// console.log(oddNums);
+
+// // function cube(element){
+// //     return Math.pow(element,3);
+// // }
+// function getOdd (element){
+//     return element % 2 !== 0;
+// }
+
+
+// ARROW FUNCTIONS
+const hello = () => console.log("hello");
+
+hello();
+const hello1 = (name, age) => {console.log(`hello${name}`);
+                            console.log(`you are ${age}years old`)};
+hello1("marie",21);
+
+setTimeout(hello, 3000);
+
+function hello(){
+    console.log("hello");
 }
 
 
+// function expression
+setTimeout(function(){
+    console.log("hello");
+},3000);
 
 
-
-
-
-
+setTimeout(() => console.log("hello"), 3000);
 
 
 
