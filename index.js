@@ -1383,11 +1383,33 @@ const squares = numbers.map(function (element){
     return Math.pow(element,2);
 });
 
+const cubes = numbers.map(function (element){
+    return Math.pow(element,3);
+}
+)
+
+const evenNums = numbers.filter(function(element) {
+    return element % 2 === 0;
+});
+
+const oddNums = numbers.filter(function(element){
+return element % 2 !== 0
+});
+
+const total = numbers.reduce(function(accumulator,element){
+    return accumulator + element;
+})
 console.log(squares);
+console.log(cubes);
+console.log(evenNums);
+console.log(oddNums);
 
-
-
-
+// function cube(element){
+//     return Math.pow(element,3);
+// }
+function getOdd (element){
+    return element % 2 !== 0;
+}
 
 
 
