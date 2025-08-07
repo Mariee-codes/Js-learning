@@ -1413,42 +1413,69 @@
 
 
 // ARROW FUNCTIONS
-const hello = () => console.log("hello");
+// const hello = () => console.log("hello");
 
-hello();
-const hello1 = (name, age) => {console.log(`hello${name}`);
-                            console.log(`you are ${age}years old`)};
-hello1("marie",21);
+// hello();
+// const hello1 = (name, age) => {console.log(`hello${name}`);
+//                             console.log(`you are ${age}years old`)};
+// hello1("marie",21);
 
-setTimeout(hello, 3000);
+// setTimeout(hello, 3000);
 
-function hello(){
-    console.log("hello");
+// function hello(){
+//     console.log("hello");
+// }
+
+
+// // function expression
+// setTimeout(function(){
+//     console.log("hello");
+// },3000);
+
+
+// setTimeout(() => console.log("hello"), 3000);
+
+// const numbers = [1,2,3,4,5,6];
+
+// const squares = numbers.map((element) => Math.pow(element,2));
+// const cubes = numbers.map((element) => Math.pow(element,3));
+// const evenNums = numbers.filter((element)=> element % 2=== 0);
+// const oddNums = numbers.filter((element)=> element % 2 !== 0);
+// const total = numbers.reduce((accumulator,element)=> accumulator + element );
+
+// console.log(cubes);
+// console.log(squares);
+// console.log(evenNums);
+// console.log(oddNums);
+
+// JS OBJECTS
+const person ={
+    firstName:"spongebob",
+    lastName:"squarepants",
+    age:30,
+    isEmployed: true,
+    sayHello: function(){console.log("Hi! I am spongebob")},
 }
 
+const person1 = {
+    firstName:"patrick",
+    lastName:"star",
+    age:42,
+    isEmployed: false,
+    sayHello: function () {console.log("hello I am  patrick")}
+}
+person.sayHello();
+person1.sayHello();
 
-// function expression
-setTimeout(function(){
-    console.log("hello");
-},3000);
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.age);
+console.log(person.isEmployed);
 
-
-setTimeout(() => console.log("hello"), 3000);
-
-const numbers = [1,2,3,4,5,6];
-
-const squares = numbers.map((element) => Math.pow(element,2));
-const cubes = numbers.map((element) => Math.pow(element,3));
-const evenNums = numbers.filter((element)=> element % 2=== 0);
-const oddNums = numbers.filter((element)=> element % 2 !== 0);
-const total = numbers.reduce((accumulator,element)=> accumulator + element );
-
-console.log(cubes);
-console.log(squares);
-console.log(evenNums);
-console.log(oddNums);
-
-
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.age);
+console.log(person1.isEmployed);
 
 
 
