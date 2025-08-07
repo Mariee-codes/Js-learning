@@ -1455,6 +1455,7 @@ const person ={
     age:30,
     isEmployed: true,
     sayHello: function(){console.log("Hi! I am spongebob")},
+    eat: function(){console.log("i am eating a krabby party")},
 }
 
 const person1 = {
@@ -1462,7 +1463,9 @@ const person1 = {
     lastName:"star",
     age:42,
     isEmployed: false,
-    sayHello: function () {console.log("hello I am  patrick")}
+    sayHello: function () {console.log("hello I am  patrick")},
+    //sayHello:() => console.log("hey ...")
+    eat:()=> console.log("i am eating a burger"),
 }
 person.sayHello();
 person1.sayHello();
