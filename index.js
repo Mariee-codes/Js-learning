@@ -1449,42 +1449,51 @@
 // console.log(oddNums);
 
 // JS OBJECTS
-const person ={
-    firstName:"spongebob",
-    lastName:"squarepants",
-    age:30,
-    isEmployed: true,
-    sayHello: function(){console.log("Hi! I am spongebob")},
-    eat: function(){console.log("i am eating a krabby party")},
-}
+// const person ={
+//     firstName:"spongebob",
+//     lastName:"squarepants",
+//     age:30,
+//     isEmployed: true,
+//     sayHello: function(){console.log("Hi! I am spongebob")},
+//     eat: function(){console.log("i am eating a krabby party")},
+// }
 
+// const person1 = {
+//     firstName:"patrick",
+//     lastName:"star",
+//     age:42,
+//     isEmployed: false,
+//     sayHello: function () {console.log("hello I am  patrick")},
+//     //sayHello:() => console.log("hey ...")
+//     eat:()=> console.log("i am eating a burger"),
+// }
+// person.sayHello();
+// person1.sayHello();
+
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.age);
+// console.log(person.isEmployed);
+
+// console.log(person1.firstName);
+// console.log(person1.lastName);
+// console.log(person1.age);
+// console.log(person1.isEmployed);
+
+
+// // this = reference to the objects where this is used (the object depends on the immesdiate context)person.name= this.name
+
+
+//  THIS IN JAVASCRIPT
 const person1 = {
-    firstName:"patrick",
-    lastName:"star",
-    age:42,
-    isEmployed: false,
-    sayHello: function () {console.log("hello I am  patrick")},
-    //sayHello:() => console.log("hey ...")
-    eat:()=> console.log("i am eating a burger"),
+    name:"spongebob",
+    favFood: "hamburgers",
+    sayHello: function(){console.log(`Hi! I  am ${this.name}`)}
+    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)},
+
 }
-person.sayHello();
 person1.sayHello();
-
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.age);
-console.log(person.isEmployed);
-
-console.log(person1.firstName);
-console.log(person1.lastName);
-console.log(person1.age);
-console.log(person1.isEmployed);
-
-
-
-
-
-
+person1.eat();
 
 
 
