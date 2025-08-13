@@ -1507,32 +1507,12 @@
 
 
 // CONSTRUCTOR = special method for defining the properties and methods of objects
-function Car(make,model,year,color){
-    this.make = make,
-    this.model = model,
-    this.year = year,
-    this.color = color,
-    this.drive = function(){console.log(`you drive the ${this.model}`)}
-}
-const car1 = new Car("Ford","Mustang",2024,"red");
-const car2 = new Car ("chevrolet","camaro",2025,"blue");
-
-console.log(car1.make);
-console.log(car1.model);
-console.log(car1.year);
-console.log(car1.color);
-console.log(car1.drive());
-
-console.log(car2.make);
-console.log(car2.model);
-console.log(car2.year);
-console.log(car2.color);
-
-// function Car(a,b,c,d){
-//     this.make = a,
-//     this.model = b,
-//     this.year = c,
-//     this.color = d
+// function Car(make,model,year,color){
+//     this.make = make,
+//     this.model = model,
+//     this.year = year,
+//     this.color = color,
+//     this.drive = function(){console.log(`you drive the ${this.model}`)}
 // }
 // const car1 = new Car("Ford","Mustang",2024,"red");
 // const car2 = new Car ("chevrolet","camaro",2025,"blue");
@@ -1541,20 +1521,66 @@ console.log(car2.color);
 // console.log(car1.model);
 // console.log(car1.year);
 // console.log(car1.color);
+// console.log(car1.drive());
 
 // console.log(car2.make);
 // console.log(car2.model);
 // console.log(car2.year);
 // console.log(car2.color);
 
-car1.drive();
-car2.drive();
-car3.drive();
+// // function Car(a,b,c,d){
+// //     this.make = a,
+// //     this.model = b,
+// //     this.year = c,
+// //     this.color = d
+// // }
+// // const car1 = new Car("Ford","Mustang",2024,"red");
+// // const car2 = new Car ("chevrolet","camaro",2025,"blue");
+
+// // console.log(car1.make);
+// // console.log(car1.model);
+// // console.log(car1.year);
+// // console.log(car1.color);
+
+// // console.log(car2.make);
+// // console.log(car2.model);
+// // console.log(car2.year);
+// // console.log(car2.color);
+
+// car1.drive();
+// car2.drive();
+// car3.drive();
 
 
+// CLASSES
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
 
+    displayProduct(){
+        console.log(`product: ${this.name}`);
+        console.log(`price: $${this.price.toFixed(2)}`);
+    }
 
+    calculateTotal(salesTax){
+        return this.price + (this.price * salesTax);
+    }
+}
 
+const salesTax = 0.05;
+
+const product1 = new Product("shirt", 19.99);
+const product2 = new Product("pants", 22.99);
+const product3 = new Product("underwear", 100.99);
+
+product1.displayProduct();
+product2.displayProduct();
+product3.displayProduct();
+
+const total = product1.calculateTotal( salesTax);
+console.log(`Total price(with tax): $${total.toFixed(2)}`);
 
 
 
