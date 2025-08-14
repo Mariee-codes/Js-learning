@@ -1605,42 +1605,84 @@
 // console.log(MathUtil.getArea(10));
 
 
-class User{
-    static userCount = 0;
+// class User{
+//     static userCount = 0;
 
-    constructor(username){ 
-        this.username = username;
-        User.userCount ++;
-    }
+//     constructor(username){ 
+//         this.username = username;
+//         User.userCount ++;
+//     }
 
-    static getUserCount(){
-        console.log(`There are ${User.userCount} users online`);
+//     static getUserCount(){
+//         console.log(`There are ${User.userCount} users online`);
+//     }
+//     sayHello(){
+//         console.log(`Hello, my username is ${this.username}`);
+//     }
+// }
+// const user1 = new User("spongebob");
+// const user2 = new User("patrick");
+// const user3 = new User("sandy");
+
+// console.log(user1.username);
+// console.log(user2.username);
+// console.log(user3.username);
+
+// user1.sayHello();
+// user2.sayHello();
+// user3.sayHello();
+// console.log(User.userCount);
+// User.getUserCount();
+
+
+//INHERITANCE
+class Animal{
+    alive =  true;
+
+    eat(){
+        console.log(`This ${this.name} is  eating`);
     }
-    sayHello(){
-        console.log(`Hello, my username is ${this.username}`);
+    sleep(){
+        console.log(`This ${this.name} is sleeping`);
     }
 }
-const user1 = new User("spongebob");
-const user2 = new User("patrick");
-const user3 = new User("sandy");
+class Rabbit extends Animal{
+    name = "rabbit";
 
-console.log(user1.username);
-console.log(user2.username);
-console.log(user3.username);
+    run(){
+        console.log(`This ${this.name} is running`);
+    }
+}
+class Fish extends Animal{
+    name = "fish";
 
-user1.sayHello();
-user2.sayHello();
-user3.sayHello();
-console.log(User.userCount);
-User.getUserCount();
+    swim(){
+        console.log(`This ${this.name} is swimming`);
+    }
+}
+class Hawk extends Animal{
+    name = "hawk";
 
+    fly(){
+        console.log(`This ${this.name} is flying`);
+    }
+}
 
+const rabbit = new Rabbit(); 
+const fish = new Fish();
+const hawk = new Hawk();
 
+console.log(rabbit.alive);
+rabbit.eat();
+rabbit.sleep();
 
+console.log(fish.alive);
+fish.eat();
+fish.sleep();
 
-
-
-
+console.log(hawk.alive);
+hawk.eat();
+hawk.fly();
 
 
 
