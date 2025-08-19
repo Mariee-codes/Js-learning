@@ -2126,43 +2126,58 @@
 // console.log(a);
 // console.log(b);
 
-const colors = ["red","green","blue","black","white"];
-// [colors[0], colors[4]] = [colors[4], colors[0]];
-// console.log(colors);
+// const colors = ["red","green","blue","black","white"];
+// // [colors[0], colors[4]] = [colors[4], colors[0]];
+// // console.log(colors);
 
-const [firstColor,secondColor,thirdColor,... extraColors] = colors;
+// const [firstColor,secondColor,thirdColor,... extraColors] = colors;
 
-console.log(firstColor);
-console.log(secondColor);
-console.log(thirdColor);
-console.log(extraColors);
+// console.log(firstColor);
+// console.log(secondColor);
+// console.log(thirdColor);
+// console.log(extraColors);
 
 
-// EXTRACT VALUES FROM OBJECTS
+// // EXTRACT VALUES FROM OBJECTS
 
-function displayPerson({firstName, lastName, age, job}){
-    console.log(`name: ${firstName} ${lastName}`);
-    console.log(`age: ${age}`);
-    console.log(`job: ${job}`);
+// function displayPerson({firstName, lastName, age, job}){
+//     console.log(`name: ${firstName} ${lastName}`);
+//     console.log(`age: ${age}`);
+//     console.log(`job: ${job}`);
+// }
+// const person1 = {
+//     firstName: "spongebob",
+//     lastName: "squarepants",
+//     age:30,
+//     job:"fry cook"
+// }
+
+// const person2 = {
+//     firstName: "patrick",
+//     lastName: "star",
+//     age:40,
+// }
+
+// displayPerson(person1);
+
+const person = {
+    fullName: "patrick Star",
+    age: 30,
+    isStudent: true,
+    hobbies:["karate","jellyfishing","cooking"],
+    address: {
+        street:"124 Conch St.",
+        city:"Bikini Bottom",
+        country:"Int. Water"
+    }
 }
-const person1 = {
-    firstName: "spongebob",
-    lastName: "squarepants",
-    age:30,
-    job:"fry cook"
-}
 
-const person2 = {
-    firstName: "patrick",
-    lastName: "star",
-    age:40,
-}
-
-displayPerson(person1);
-
-
-
-
+console.log(person.fullName);
+console.log(person.age);
+console.log(person.isStudent);
+console.log(person.hobbies[0]);
+console.log(person.address);
+console.log(person.address.city);
 
 
 
