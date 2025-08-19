@@ -2053,63 +2053,86 @@
 // This demonstrates the core principles that make blockchain secure and trustworthy!
 // `);
 
-class Person{
-    constructor(firstName, lastName, age){
-        this.firstName= firstName;
-        this.lastName = lastName;
-        this.age= age;
-    }
-    set firstName(newFirstName){
-    if(typeof newFirstName === "string" && newFirstName.length > 0){
-    this._firstName = newFirstName;
-    }
-else {
-    console.error("First name must be a non-empty string");
-}
-    }
-    set lastName(newLastName){
-        if(typeof newLastName === "string" && newLastName.length > 0){
-        this._lastName = newLastName;
-        }
-    else {
-        console.error("Last name must be a non-empty string");
-    }
-        }
+// class Person{
+//     constructor(firstName, lastName, age){
+//         this.firstName= firstName;
+//         this.lastName = lastName;
+//         this.age= age;
+//     }
+//     set firstName(newFirstName){
+//     if(typeof newFirstName === "string" && newFirstName.length > 0){
+//     this._firstName = newFirstName;
+//     }
+// else {
+//     console.error("First name must be a non-empty string");
+// }
+//     }
+//     set lastName(newLastName){
+//         if(typeof newLastName === "string" && newLastName.length > 0){
+//         this._lastName = newLastName;
+//         }
+//     else {
+//         console.error("Last name must be a non-empty string");
+//     }
+//         }
 
-        set age(newAge){
-            if(typeof newAge === "number" && newAge >= 0){
-                this._age = newAge;
-            }
-            else{
-                console.error("Age must be a non-negative number");
-            }
-        }
+//         set age(newAge){
+//             if(typeof newAge === "number" && newAge >= 0){
+//                 this._age = newAge;
+//             }
+//             else{
+//                 console.error("Age must be a non-negative number");
+//             }
+//         }
 
-        get firstName(){
-            return this._firstName;
-        }
+//         get firstName(){
+//             return this._firstName;
+//         }
 
-        get lastName(){
-            return this._lastName;
-        }
+//         get lastName(){
+//             return this._lastName;
+//         }
 
-        get fullName(){
-            return this._firstName + " " + this._lastName;
-        }
+//         get fullName(){
+//             return this._firstName + " " + this._lastName;
+//         }
 
-        get age(){
-            return this._age;
-        }
-    }
+//         get age(){
+//             return this._age;
+//         }
+//     }
 
     
 
-const person = new Person("patrick","star",20);
+// const person = new Person("patrick","star",20);
 
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.age);
-console.log(person.fullName);
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.age);
+// console.log(person.fullName);
+
+
+// destructuring = extract values from arrays and objects, then assign them to variables in a convenient way.
+// [] = to perfom array destructuring
+// {}= to perfom object destructuring
+
+// EXAMPLE 1
+// SWAP THE VALUE OF TWO VARIABLES
+
+let a = 1;
+let b = 2;
+[a,b] = [b,a];
+
+console.log(a);
+console.log(b);
+
+const colors = ["red","green","blue","black","white"];
+[colors[0], colors[4]] = [colors[4], colors[0]];
+console.log(colors);
+
+
+
+
 
 
 
