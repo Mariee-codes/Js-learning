@@ -1752,310 +1752,364 @@
 //getter = special method that makes a propertyrradabked
 //setter = special method that makes a property Writable
 // validate and modify a value when reading/writring a property
-class Rectangle{
-    constructor(width,height){
-        this.width = width;
-        this.height = height;
-    }
+// class Rectangle{
+//     constructor(width,height){
+//         this.width = width;
+//         this.height = height;
+//     }
 
-    set width(newWidth){
-        if(newWidth > 0){
-            this._width = newWidth;
-        }
-        else{
-            console.error("width must be a positive number");
-        }
-    }
+//     set width(newWidth){
+//         if(newWidth > 0){
+//             this._width = newWidth;
+//         }
+//         else{
+//             console.error("width must be a positive number");
+//         }
+//     }
 
-    set height(newHeight){
-        if(newHeight > 0){
-            this._Height = newHeight;
-        }
-        else{
-            console.error("height must be a positive number");
-        }
-    }
+//     set height(newHeight){
+//         if(newHeight > 0){
+//             this._Height = newHeight;
+//         }
+//         else{
+//             console.error("height must be a positive number");
+//         }
+//     }
 
-    get width(){
-        return `${this._width.toFixed(1)}cm`;
-    }
+//     get width(){
+//         return `${this._width.toFixed(1)}cm`;
+//     }
 
-    get height(){
-        return `${this._Height.toFixed(1)}cm`;
-    }
-    get area(){
-        return `${(this._width * this._Height).toFixed(1)}cm^2`;
-    }
-}
-const rectangle = new Rectangle (3,4);
+//     get height(){
+//         return `${this._Height.toFixed(1)}cm`;
+//     }
+//     get area(){
+//         return `${(this._width * this._Height).toFixed(1)}cm^2`;
+//     }
+// }
+// const rectangle = new Rectangle (3,4);
 
-console.log(rectangle.width);
-console.log(rectangle.height);
-console.log(rectangle.area);
+// console.log(rectangle.width);
+// console.log(rectangle.height);
+// console.log(rectangle.area);
 
 
-// ==========================================
-// BLOCKCHAIN IMPLEMENTATION DEMO
-// ==========================================
+// // ==========================================
+// // BLOCKCHAIN IMPLEMENTATION DEMO
+// // ==========================================
 
-// Simple SHA-256 hash function implementation
-// In a real blockchain, you'd use a proper crypto library
-class SimpleHash {
-    static hash(data) {
-        let hash = 0;
-        const str = JSON.stringify(data);
+// // Simple SHA-256 hash function implementation
+// // In a real blockchain, you'd use a proper crypto library
+// class SimpleHash {
+//     static hash(data) {
+//         let hash = 0;
+//         const str = JSON.stringify(data);
         
-        for (let i = 0; i < str.length; i++) {
-            const char = str.charCodeAt(i);
-            hash = ((hash << 5) - hash) + char;
-            hash = hash & hash; // Convert to 32-bit integer
-        }
+//         for (let i = 0; i < str.length; i++) {
+//             const char = str.charCodeAt(i);
+//             hash = ((hash << 5) - hash) + char;
+//             hash = hash & hash; // Convert to 32-bit integer
+//         }
         
-        // Convert to hex and pad to simulate SHA-256 format
-        return Math.abs(hash).toString(16).padStart(16, '0') + 
-               Math.random().toString(16).substr(2, 48);
-    }
-}
+//         // Convert to hex and pad to simulate SHA-256 format
+//         return Math.abs(hash).toString(16).padStart(16, '0') + 
+//                Math.random().toString(16).substr(2, 48);
+//     }
+// }
 
-// Block class representing each block in the blockchain
-class Block {
-    constructor(index, data, previousHash) {
-        this.index = index;
-        this.timestamp = new Date().toISOString();
-        this.data = data;
-        this.previousHash = previousHash;
-        this.nonce = 0; // Number used for mining (proof of work)
-        this.hash = this.calculateHash();
-    }
+// // Block class representing each block in the blockchain
+// class Block {
+//     constructor(index, data, previousHash) {
+//         this.index = index;
+//         this.timestamp = new Date().toISOString();
+//         this.data = data;
+//         this.previousHash = previousHash;
+//         this.nonce = 0; // Number used for mining (proof of work)
+//         this.hash = this.calculateHash();
+//     }
     
-    // Calculate the hash of this block
-    calculateHash() {
-        return SimpleHash.hash({
-            index: this.index,
-            timestamp: this.timestamp,
-            data: this.data,
-            previousHash: this.previousHash,
-            nonce: this.nonce
-        });
-    }
+//     // Calculate the hash of this block
+//     calculateHash() {
+//         return SimpleHash.hash({
+//             index: this.index,
+//             timestamp: this.timestamp,
+//             data: this.data,
+//             previousHash: this.previousHash,
+//             nonce: this.nonce
+//         });
+//     }
     
-    // Mining function - finds a hash that starts with certain number of zeros
-    mineBlock(difficulty) {
-        const target = Array(difficulty + 1).join("0");
+//     // Mining function - finds a hash that starts with certain number of zeros
+//     mineBlock(difficulty) {
+//         const target = Array(difficulty + 1).join("0");
         
-        console.log(`Mining block ${this.index}...`);
-        const startTime = Date.now();
+//         console.log(`Mining block ${this.index}...`);
+//         const startTime = Date.now();
         
-        while (this.hash.substring(0, difficulty) !== target) {
-            this.nonce++;
-            this.hash = this.calculateHash();
-        }
+//         while (this.hash.substring(0, difficulty) !== target) {
+//             this.nonce++;
+//             this.hash = this.calculateHash();
+//         }
         
-        const endTime = Date.now();
-        console.log(`Block ${this.index} mined in ${endTime - startTime}ms. Hash: ${this.hash}`);
-    }
-}
+//         const endTime = Date.now();
+//         console.log(`Block ${this.index} mined in ${endTime - startTime}ms. Hash: ${this.hash}`);
+//     }
+// }
 
-// Transaction class to represent data being stored
-class Transaction {
-    constructor(from, to, amount) {
-        this.from = from;
-        this.to = to;
-        this.amount = amount;
-        this.timestamp = new Date().toISOString();
-    }
-}
+// // Transaction class to represent data being stored
+// class Transaction {
+//     constructor(from, to, amount) {
+//         this.from = from;
+//         this.to = to;
+//         this.amount = amount;
+//         this.timestamp = new Date().toISOString();
+//     }
+// }
 
-// Main Blockchain class
-class Blockchain {
-    constructor() {
-        this.chain = [this.createGenesisBlock()];
-        this.difficulty = 2; // Mining difficulty (number of leading zeros required)
-        this.pendingTransactions = [];
-        this.miningReward = 100;
-    }
+// // Main Blockchain class
+// class Blockchain {
+//     constructor() {
+//         this.chain = [this.createGenesisBlock()];
+//         this.difficulty = 2; // Mining difficulty (number of leading zeros required)
+//         this.pendingTransactions = [];
+//         this.miningReward = 100;
+//     }
     
-    // Create the first block in the chain
-    createGenesisBlock() {
-        const genesisBlock = new Block(0, "Genesis Block", "0");
-        console.log("Created Genesis Block");
-        return genesisBlock;
-    }
+//     // Create the first block in the chain
+//     createGenesisBlock() {
+//         const genesisBlock = new Block(0, "Genesis Block", "0");
+//         console.log("Created Genesis Block");
+//         return genesisBlock;
+//     }
     
-    // Get the latest block in the chain
-    getLatestBlock() {
-        return this.chain[this.chain.length - 1];
-    }
+//     // Get the latest block in the chain
+//     getLatestBlock() {
+//         return this.chain[this.chain.length - 1];
+//     }
     
-    // Add a new transaction to pending transactions
-    createTransaction(transaction) {
-        this.pendingTransactions.push(transaction);
-        console.log(`Transaction added: ${transaction.from} -> ${transaction.to}: ${transaction.amount}`);
-    }
+//     // Add a new transaction to pending transactions
+//     createTransaction(transaction) {
+//         this.pendingTransactions.push(transaction);
+//         console.log(`Transaction added: ${transaction.from} -> ${transaction.to}: ${transaction.amount}`);
+//     }
     
-    // Mine all pending transactions and add them to the blockchain
-    minePendingTransactions(miningRewardAddress) {
-        // Add mining reward transaction
-        const rewardTransaction = new Transaction(null, miningRewardAddress, this.miningReward);
-        this.pendingTransactions.push(rewardTransaction);
+//     // Mine all pending transactions and add them to the blockchain
+//     minePendingTransactions(miningRewardAddress) {
+//         // Add mining reward transaction
+//         const rewardTransaction = new Transaction(null, miningRewardAddress, this.miningReward);
+//         this.pendingTransactions.push(rewardTransaction);
         
-        // Create new block with pending transactions
-        const block = new Block(
-            this.chain.length,
-            this.pendingTransactions,
-            this.getLatestBlock().hash
-        );
+//         // Create new block with pending transactions
+//         const block = new Block(
+//             this.chain.length,
+//             this.pendingTransactions,
+//             this.getLatestBlock().hash
+//         );
         
-        // Mine the block
-        block.mineBlock(this.difficulty);
+//         // Mine the block
+//         block.mineBlock(this.difficulty);
         
-        // Add block to chain and clear pending transactions
-        this.chain.push(block);
-        this.pendingTransactions = [];
+//         // Add block to chain and clear pending transactions
+//         this.chain.push(block);
+//         this.pendingTransactions = [];
         
-        console.log(`Block successfully mined and added to chain!`);
-    }
+//         console.log(`Block successfully mined and added to chain!`);
+//     }
     
-    // Get balance for an address
-    getBalance(address) {
-        let balance = 0;
+//     // Get balance for an address
+//     getBalance(address) {
+//         let balance = 0;
         
-        for (const block of this.chain) {
-            if (Array.isArray(block.data)) {
-                for (const transaction of block.data) {
-                    if (transaction.from === address) {
-                        balance -= transaction.amount;
-                    }
-                    if (transaction.to === address) {
-                        balance += transaction.amount;
-                    }
-                }
-            }
-        }
+//         for (const block of this.chain) {
+//             if (Array.isArray(block.data)) {
+//                 for (const transaction of block.data) {
+//                     if (transaction.from === address) {
+//                         balance -= transaction.amount;
+//                     }
+//                     if (transaction.to === address) {
+//                         balance += transaction.amount;
+//                     }
+//                 }
+//             }
+//         }
         
-        return balance;
-    }
+//         return balance;
+//     }
     
-    // Validate the entire blockchain
-    isChainValid() {
-        for (let i = 1; i < this.chain.length; i++) {
-            const currentBlock = this.chain[i];
-            const previousBlock = this.chain[i - 1];
+//     // Validate the entire blockchain
+//     isChainValid() {
+//         for (let i = 1; i < this.chain.length; i++) {
+//             const currentBlock = this.chain[i];
+//             const previousBlock = this.chain[i - 1];
             
-            // Check if current block's hash is valid
-            if (currentBlock.hash !== currentBlock.calculateHash()) {
-                console.log("Invalid hash detected!");
-                return false;
-            }
+//             // Check if current block's hash is valid
+//             if (currentBlock.hash !== currentBlock.calculateHash()) {
+//                 console.log("Invalid hash detected!");
+//                 return false;
+//             }
             
-            // Check if current block points to previous block
-            if (currentBlock.previousHash !== previousBlock.hash) {
-                console.log("Invalid previous hash detected!");
-                return false;
+//             // Check if current block points to previous block
+//             if (currentBlock.previousHash !== previousBlock.hash) {
+//                 console.log("Invalid previous hash detected!");
+//                 return false;
+//             }
+//         }
+        
+//         return true;
+//     }
+    
+//     // Display the entire blockchain
+//     displayChain() {
+//         console.log("\n=== BLOCKCHAIN ===");
+//         this.chain.forEach((block, index) => {
+//             console.log(`\nBlock ${index}:`);
+//             console.log(`  Timestamp: ${block.timestamp}`);
+//             console.log(`  Previous Hash: ${block.previousHash}`);
+//             console.log(`  Hash: ${block.hash}`);
+//             console.log(`  Nonce: ${block.nonce}`);
+//             console.log(`  Data:`, block.data);
+//         });
+//         console.log("==================\n");
+//     }
+// }
+
+// // ==========================================
+// // BLOCKCHAIN DEMONSTRATION
+// // ==========================================
+
+// console.log("🔗 BLOCKCHAIN DEMONSTRATION STARTING...\n");
+
+// // Create a new blockchain
+// const myCoin = new Blockchain();
+
+// console.log("📊 Initial blockchain state:");
+// myCoin.displayChain();
+
+// // Create some transactions
+// console.log("💰 Creating transactions...");
+// myCoin.createTransaction(new Transaction("Alice", "Bob", 50));
+// myCoin.createTransaction(new Transaction("Bob", "Charlie", 25));
+
+// // Mine a block
+// console.log("\n⛏️  Mining block 1...");
+// myCoin.minePendingTransactions("Miner1");
+
+// // Check balances
+// console.log("\n💳 Balances after mining:");
+// console.log(`Alice: ${myCoin.getBalance("Alice")}`);
+// console.log(`Bob: ${myCoin.getBalance("Bob")}`);
+// console.log(`Charlie: ${myCoin.getBalance("Charlie")}`);
+// console.log(`Miner1: ${myCoin.getBalance("Miner1")}`);
+
+// // Add more transactions
+// console.log("\n💰 Creating more transactions...");
+// myCoin.createTransaction(new Transaction("Alice", "Charlie", 30));
+// myCoin.createTransaction(new Transaction("Charlie", "Bob", 10));
+
+// // Mine another block
+// console.log("\n⛏️  Mining block 2...");
+// myCoin.minePendingTransactions("Miner2");
+
+// // Final balances
+// console.log("\n💳 Final balances:");
+// console.log(`Alice: ${myCoin.getBalance("Alice")}`);
+// console.log(`Bob: ${myCoin.getBalance("Bob")}`);
+// console.log(`Charlie: ${myCoin.getBalance("Charlie")}`);
+// console.log(`Miner1: ${myCoin.getBalance("Miner1")}`);
+// console.log(`Miner2: ${myCoin.getBalance("Miner2")}`);
+
+// // Display final blockchain
+// myCoin.displayChain();
+
+// // Validate blockchain integrity
+// console.log("🔒 Blockchain validation:");
+// console.log(`Is blockchain valid? ${myCoin.isChainValid()}`);
+
+// // Demonstrate tampering detection
+// console.log("\n🚨 Demonstrating tampering detection...");
+// console.log("Attempting to tamper with block 1 data...");
+// myCoin.chain[1].data = "TAMPERED DATA";
+// console.log(`Is blockchain still valid? ${myCoin.isChainValid()}`);
+
+// // Restore the blockchain
+// console.log("\n🔧 Restoring blockchain integrity...");
+// myCoin.chain[1].hash = myCoin.chain[1].calculateHash();
+// console.log(`Is blockchain valid after restoration? ${myCoin.isChainValid()}`);
+
+// console.log("\n✅ BLOCKCHAIN DEMONSTRATION COMPLETE!");
+
+// console.log(`
+// 🔗 BLOCKCHAIN CONCEPTS DEMONSTRATED:
+
+// 1. **Blocks**: Each block contains data, timestamp, and hash
+// 2. **Hashing**: Each block has a unique hash based on its content
+// 3. **Chain Linking**: Each block references the previous block's hash
+// 4. **Mining (Proof of Work)**: Computational work required to add blocks
+// 5. **Transactions**: Data stored in blocks representing value transfers
+// 6. **Immutability**: Tampering with data breaks the chain validation
+// 7. **Decentralization**: No central authority controls the blockchain
+// 8. **Consensus**: All participants agree on the valid chain state
+
+// This demonstrates the core principles that make blockchain secure and trustworthy!
+// `);
+
+class Person{
+    constructor(firstName, lastName, age){
+        this.firstName= firstName;
+        this.lastName = lastName;
+        this.age= age;
+    }
+    set firstName(newFirstName){
+    if(typeof newFirstName === "string" && newFirstName.length > 0){
+    this._firstName = newFirstName;
+    }
+else {
+    console.error("First name must be a non-empty string");
+}
+    }
+    set lastName(newLastName){
+        if(typeof newLastName === "string" && newLastName.length > 0){
+        this._lastName = newLastName;
+        }
+    else {
+        console.error("Last name must be a non-empty string");
+    }
+        }
+
+        set age(newAge){
+            if(typeof newAge === "number" && newAge >= 0){
+                this._age = newAge;
+            }
+            else{
+                console.error("Age must be a non-negative number");
             }
         }
-        
-        return true;
+
+        get firstName(){
+            return this._firstName;
+        }
+
+        get lastName(){
+            return this._lastName;
+        }
+
+        get fullName(){
+            return this._firstName + " " + this._lastName;
+        }
+
+        get age(){
+            return this._age;
+        }
     }
+
     
-    // Display the entire blockchain
-    displayChain() {
-        console.log("\n=== BLOCKCHAIN ===");
-        this.chain.forEach((block, index) => {
-            console.log(`\nBlock ${index}:`);
-            console.log(`  Timestamp: ${block.timestamp}`);
-            console.log(`  Previous Hash: ${block.previousHash}`);
-            console.log(`  Hash: ${block.hash}`);
-            console.log(`  Nonce: ${block.nonce}`);
-            console.log(`  Data:`, block.data);
-        });
-        console.log("==================\n");
-    }
-}
 
-// ==========================================
-// BLOCKCHAIN DEMONSTRATION
-// ==========================================
+const person = new Person("patrick","star",20);
 
-console.log("🔗 BLOCKCHAIN DEMONSTRATION STARTING...\n");
-
-// Create a new blockchain
-const myCoin = new Blockchain();
-
-console.log("📊 Initial blockchain state:");
-myCoin.displayChain();
-
-// Create some transactions
-console.log("💰 Creating transactions...");
-myCoin.createTransaction(new Transaction("Alice", "Bob", 50));
-myCoin.createTransaction(new Transaction("Bob", "Charlie", 25));
-
-// Mine a block
-console.log("\n⛏️  Mining block 1...");
-myCoin.minePendingTransactions("Miner1");
-
-// Check balances
-console.log("\n💳 Balances after mining:");
-console.log(`Alice: ${myCoin.getBalance("Alice")}`);
-console.log(`Bob: ${myCoin.getBalance("Bob")}`);
-console.log(`Charlie: ${myCoin.getBalance("Charlie")}`);
-console.log(`Miner1: ${myCoin.getBalance("Miner1")}`);
-
-// Add more transactions
-console.log("\n💰 Creating more transactions...");
-myCoin.createTransaction(new Transaction("Alice", "Charlie", 30));
-myCoin.createTransaction(new Transaction("Charlie", "Bob", 10));
-
-// Mine another block
-console.log("\n⛏️  Mining block 2...");
-myCoin.minePendingTransactions("Miner2");
-
-// Final balances
-console.log("\n💳 Final balances:");
-console.log(`Alice: ${myCoin.getBalance("Alice")}`);
-console.log(`Bob: ${myCoin.getBalance("Bob")}`);
-console.log(`Charlie: ${myCoin.getBalance("Charlie")}`);
-console.log(`Miner1: ${myCoin.getBalance("Miner1")}`);
-console.log(`Miner2: ${myCoin.getBalance("Miner2")}`);
-
-// Display final blockchain
-myCoin.displayChain();
-
-// Validate blockchain integrity
-console.log("🔒 Blockchain validation:");
-console.log(`Is blockchain valid? ${myCoin.isChainValid()}`);
-
-// Demonstrate tampering detection
-console.log("\n🚨 Demonstrating tampering detection...");
-console.log("Attempting to tamper with block 1 data...");
-myCoin.chain[1].data = "TAMPERED DATA";
-console.log(`Is blockchain still valid? ${myCoin.isChainValid()}`);
-
-// Restore the blockchain
-console.log("\n🔧 Restoring blockchain integrity...");
-myCoin.chain[1].hash = myCoin.chain[1].calculateHash();
-console.log(`Is blockchain valid after restoration? ${myCoin.isChainValid()}`);
-
-console.log("\n✅ BLOCKCHAIN DEMONSTRATION COMPLETE!");
-
-console.log(`
-🔗 BLOCKCHAIN CONCEPTS DEMONSTRATED:
-
-1. **Blocks**: Each block contains data, timestamp, and hash
-2. **Hashing**: Each block has a unique hash based on its content
-3. **Chain Linking**: Each block references the previous block's hash
-4. **Mining (Proof of Work)**: Computational work required to add blocks
-5. **Transactions**: Data stored in blocks representing value transfers
-6. **Immutability**: Tampering with data breaks the chain validation
-7. **Decentralization**: No central authority controls the blockchain
-8. **Consensus**: All participants agree on the valid chain state
-
-This demonstrates the core principles that make blockchain secure and trustworthy!
-`);
-
-
-
-
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.age);
+console.log(person.fullName);
 
 
 
