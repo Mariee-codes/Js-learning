@@ -2139,6 +2139,12 @@ console.log(extraColors);
 
 
 // EXTRACT VALUES FROM OBJECTS
+
+function displayPerson({firstName, lastName, age, job}){
+    console.log(`name: ${firstName} ${lastName}`);
+    console.log(`age: ${age}`);
+    console.log(`job: ${job}`);
+}
 const person1 = {
     firstName: "spongebob",
     lastName: "squarepants",
@@ -2152,13 +2158,7 @@ const person2 = {
     age:40,
 }
 
-const {firstName, lastName,age,job="unemployed"} = person2;
-
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(job);
-
+displayPerson(person1);
 
 
 
