@@ -2172,6 +2172,10 @@ const person = {
     }
 }
 
+
+for (const property in person.address){
+    console.log(person.address[property]);
+}
 console.log(person.fullName);
 console.log(person.age);
 console.log(person.isStudent);
@@ -2180,9 +2184,38 @@ console.log(person.address);
 console.log(person.address.city);
 
 
+class Person{
+    constructor(name, age,...address){
+        this.name = name;
+        this.age = age;
+        this.address = new Address (...address);
+    }
+    
+}
 
+class Address{
+    constructor(street, city, country){
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
 
+const person1 = new Person("patrick", 30, "124 Conch St.",
+                                            "Bikini Bottom",
+                                            "Int. Water",);
 
+const person2 = new Person("spomgebob", 35, "128 Conch St.",
+                                         "Bikini Bottom",
+                                        "Int. Water",);
+    
+const person3 = new Person("squidward", 45, "126 Conch St.",
+                                            "Bikini Bottom",
+                                           "Int. Water",);
+       
+          
+
+console.log(person1. name);//address );
 
 
 
