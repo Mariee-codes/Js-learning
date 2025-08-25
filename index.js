@@ -2224,19 +2224,31 @@ const fruits = [{name:"apple", color: "red", calories:95},
         {name:"pineapple", color: "yellow", calories:37}
 ];
 
-console.log(fruits[2].calories);
+// console.log(fruits[2].calories);
 
-fruits.push({name:"grapes", color:"purple", calories:62}); //  add at the end
-console.log(fruits);
+// fruits.push({name:"grapes", color:"purple", calories:62}); //  add at the end
+// console.log(fruits);
 
-fruits.pop();
-console.log(fruits); // remove from the end
+// fruits.pop();
+// console.log(fruits); // remove from the end
 
-fruits.splice(1,2); //remove at indexes
+// fruits.splice(1,2); //remove at indexes
 
+//.......forEach() .....
+fruits.forEach(fruit => console.log(fruit));//.name));
 
+//.....map().....
+const fruitNames = fruits.map(fruit => fruit.name);
+const fruitColors = fruits.map(fruit => fruit.color);
 
+console.log(fruitNames);
+console.log(fruitColors);
 
+//..... filter().....
+const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+const lowCalFruits = fruits.filter(fruit => fruit.Calories < 100);
+const highCarlFruits = fruits.filter(fruit => fruit.calories>100);
+console.log(yellowFruits);
 
 
 
