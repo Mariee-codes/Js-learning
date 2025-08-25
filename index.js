@@ -2235,22 +2235,32 @@ const fruits = [{name:"apple", color: "red", calories:95},
 // fruits.splice(1,2); //remove at indexes
 
 //.......forEach() .....
-fruits.forEach(fruit => console.log(fruit));//.name));
+// fruits.forEach(fruit => console.log(fruit));//.name));
 
-//.....map().....
-const fruitNames = fruits.map(fruit => fruit.name);
-const fruitColors = fruits.map(fruit => fruit.color);
+// //.....map().....
+// const fruitNames = fruits.map(fruit => fruit.name);
+// const fruitColors = fruits.map(fruit => fruit.color);
 
-console.log(fruitNames);
-console.log(fruitColors);
+// console.log(fruitNames);
+// console.log(fruitColors);
 
-//..... filter().....
-const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
-const lowCalFruits = fruits.filter(fruit => fruit.Calories < 100);
-const highCarlFruits = fruits.filter(fruit => fruit.calories>100);
-console.log(yellowFruits);
+// //..... filter().....
+// const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+// const lowCalFruits = fruits.filter(fruit => fruit.Calories < 100);
+// const highCarlFruits = fruits.filter(fruit => fruit.calories>100);
+// console.log(yellowFruits);
 
+//..... reduce()......
+    const maxFruit = fruits.reduce( (max,fruit)=>
+                                    fruit.calories >max.calories?
+                                    fruit:max);
 
+     const minFruit = fruits.reduce( (min,fruit)=>
+                                        fruit.calories >min.calories?
+                                        fruit:min);
+                   
+
+console.log(maxFruit);
 
 
 
