@@ -2217,12 +2217,12 @@
 
 // console.log(person1. name);//address );
 
-const fruits = [{name:"apple", color: "red", calories:95},
-        {name:"orange", color: "orange", calories:45},
-        {name:"banana", color: "yellow", calories:105},
-        {name:"coconut", color: "white", calories:159},
-        {name:"pineapple", color: "yellow", calories:37}
-];
+// const fruits = [{name:"apple", color: "red", calories:95},
+//         {name:"orange", color: "orange", calories:45},
+//         {name:"banana", color: "yellow", calories:105},
+//         {name:"coconut", color: "white", calories:159},
+//         {name:"pineapple", color: "yellow", calories:37}
+// ];
 
 // console.log(fruits[2].calories);
 
@@ -2251,18 +2251,11 @@ const fruits = [{name:"apple", color: "red", calories:95},
 // console.log(yellowFruits);
 
 //..... reduce()......
-    const maxFruit = fruits.reduce( (max,fruit)=>
-                                    fruit.calories >max.calories?
-                                    fruit:max);
 
-     const minFruit = fruits.reduce( (min,fruit)=>
-                                        fruit.calories >min.calories?
-                                        fruit:min);
-                   
-
-console.log(maxFruit);
-
-
+// SORT = method to sort elements of an array in place, in lexicographic order =(alphabet + number +symbols)
+let fruits = ["apple","banana","orange","cucumber","pineapple"];
+fruits.sort();
+console.log(fruits);
 
 
 
