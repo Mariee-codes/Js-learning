@@ -2253,11 +2253,9 @@
 //..... reduce()......
 
 // SORT = method to sort elements of an array in place, in lexicographic order =(alphabet + number +symbols)
-let fruits = ["apple","banana","orange","cucumber","pineapple"];
-fruits.sort();
-console.log(fruits);
-
-
+ let numbers = [1,10,2,9,3,8,4,7,5,6];
+ numbers.sort((a,b) => a-b);
+ console.log(numbers);
 
 
 
