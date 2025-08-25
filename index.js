@@ -2253,15 +2253,18 @@
 //..... reduce()......
 
 // SORT = method to sort elements of an array in place, in lexicographic order =(alphabet + number +symbols)
- let numbers = [1,10,2,9,3,8,4,7,5,6];
- numbers.sort((a,b) => a-b);
- console.log(numbers);
+const people =[{name:"spongebob", age:30, gpa:3.0},
+                {name:"patrick", age:37, gpa:1.5},
+                {name:"squidward", age:51, gpa:3.5},
+                {name:"sandy", age:27, gpa:4.0}]
+people.sort((a,b) => a.age - b.age);
+console.log(people);
 
+people.sort((a,b) => a.gpa - b.gpa);
+console.log(people);
 
-
-
-
-
+people.sort((a,b) => a.name.localeCompare(b.name));
+console.log(people);
 
 
 
