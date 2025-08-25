@@ -2160,64 +2160,79 @@
 
 // displayPerson(person1);
 
-const person = {
-    fullName: "patrick Star",
-    age: 30,
-    isStudent: true,
-    hobbies:["karate","jellyfishing","cooking"],
-    address: {
-        street:"124 Conch St.",
-        city:"Bikini Bottom",
-        country:"Int. Water"
-    }
-}
+// const person = {
+//     fullName: "patrick Star",
+//     age: 30,
+//     isStudent: true,
+//     hobbies:["karate","jellyfishing","cooking"],
+//     address: {
+//         street:"124 Conch St.",
+//         city:"Bikini Bottom",
+//         country:"Int. Water"
+//     }
+// }
 
 
-for (const property in person.address){
-    console.log(person.address[property]);
-}
-console.log(person.fullName);
-console.log(person.age);
-console.log(person.isStudent);
-console.log(person.hobbies[0]);
-console.log(person.address);
-console.log(person.address.city);
+// for (const property in person.address){
+//     console.log(person.address[property]);
+// }
+// console.log(person.fullName);
+// console.log(person.age);
+// console.log(person.isStudent);
+// console.log(person.hobbies[0]);
+// console.log(person.address);
+// console.log(person.address.city);
 
 
-class Person{
-    constructor(name, age,...address){
-        this.name = name;
-        this.age = age;
-        this.address = new Address (...address);
-    }
+// class Person{
+//     constructor(name, age,...address){
+//         this.name = name;
+//         this.age = age;
+//         this.address = new Address (...address);
+//     }
     
-}
+// }
 
-class Address{
-    constructor(street, city, country){
-        this.street = street;
-        this.city = city;
-        this.country = country;
-    }
-}
+// class Address{
+//     constructor(street, city, country){
+//         this.street = street;
+//         this.city = city;
+//         this.country = country;
+//     }
+// }
 
-const person1 = new Person("patrick", 30, "124 Conch St.",
-                                            "Bikini Bottom",
-                                            "Int. Water",);
+// const person1 = new Person("patrick", 30, "124 Conch St.",
+//                                             "Bikini Bottom",
+//                                             "Int. Water",);
 
-const person2 = new Person("spomgebob", 35, "128 Conch St.",
-                                         "Bikini Bottom",
-                                        "Int. Water",);
+// const person2 = new Person("spomgebob", 35, "128 Conch St.",
+//                                          "Bikini Bottom",
+//                                         "Int. Water",);
     
-const person3 = new Person("squidward", 45, "126 Conch St.",
-                                            "Bikini Bottom",
-                                           "Int. Water",);
+// const person3 = new Person("squidward", 45, "126 Conch St.",
+//                                             "Bikini Bottom",
+//                                            "Int. Water",);
        
           
 
-console.log(person1. name);//address );
+// console.log(person1. name);//address );
 
+const fruits = [{name:"apple", color: "red", calories:95},
+        {name:"orange", color: "orange", calories:45},
+        {name:"banana", color: "yellow", calories:105},
+        {name:"coconut", color: "white", calories:159},
+        {name:"pineapple", color: "yellow", calories:37}
+];
 
+console.log(fruits[2].calories);
+
+fruits.push({name:"grapes", color:"purple", calories:62}); //  add at the end
+console.log(fruits);
+
+fruits.pop();
+console.log(fruits); // remove from the end
+
+fruits.splice(1,2); //remove at indexes
 
 
 
