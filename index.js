@@ -2282,11 +2282,28 @@
 
 // JAVASCRIPT DATE OBJECTS
 //data objects = objects that contain values that represent dates and times.these data objects can be changed  and formated
-const date1 = new Date();
-console.log(date1);
+// const date1 = new Date();
+// console.log(date1);
 
-const date = new Date(2024,0,1,2,3,4,5);
-console.log(date);
+// const date = new Date(2024,0,1,2,3,4,5);
+// console.log(date);
+
+const date = new Date();
+
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDate();
+const hour = date.getHours();
+const minute = date.getMinutes();
+const seconds = date.getSeconds();
+
+
+console.log(year);
+console.log(month);
+console.log(day);
+console.log(hour);
+console.log(minute);
+console.log(seconds);
 
 
 
