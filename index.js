@@ -2253,34 +2253,40 @@
 //..... reduce()......
 
 // SORT = method to sort elements of an array in place, in lexicographic order =(alphabet + number +symbols)
-const people =[{name:"spongebob", age:30, gpa:3.0},
-                {name:"patrick", age:37, gpa:1.5},
-                {name:"squidward", age:51, gpa:3.5},
-                {name:"sandy", age:27, gpa:4.0}]
-people.sort((a,b) => a.age - b.age);
-console.log(people);
+// const people =[{name:"spongebob", age:30, gpa:3.0},
+//                 {name:"patrick", age:37, gpa:1.5},
+//                 {name:"squidward", age:51, gpa:3.5},
+//                 {name:"sandy", age:27, gpa:4.0}]
+// people.sort((a,b) => a.age - b.age);
+// console.log(people);
 
-people.sort((a,b) => a.gpa - b.gpa);
-console.log(people);
+// people.sort((a,b) => a.gpa - b.gpa);
+// console.log(people);
 
-people.sort((a,b) => a.name.localeCompare(b.name));
-console.log(people);
+// people.sort((a,b) => a.name.localeCompare(b.name));
+// console.log(people);
 
-// shuffle an array
-// fisher-Yates algorithm
-const cards = ['A',2,3,4,5,6,7,8,9,10,'J','Q','K'];
-shuffle(cards);
-console.log(cards);
+// // shuffle an array
+// // fisher-Yates algorithm
+// const cards = ['A',2,3,4,5,6,7,8,9,10,'J','Q','K'];
+// shuffle(cards);
+// console.log(cards);
 
-function shuffle(array){
-    for(let i = array.length - 1; i>0; i--){
-        const random = Math.floor(Math.random() *(i +1));
-        [array[i], array[random]] - [array[random], array[i]];
+// function shuffle(array){
+//     for(let i = array.length - 1; i>0; i--){
+//         const random = Math.floor(Math.random() *(i +1));
+//         [array[i], array[random]] - [array[random], array[i]];
             
-        }
-    }
+//         }
+//     }
 
+// JAVASCRIPT DATE OBJECTS
+//data objects = objects that contain values that represent dates and times.these data objects can be changed  and formated
+const date1 = new Date();
+console.log(date1);
 
+const date = new Date(2024,0,1,2,3,4,5);
+console.log(date);
 
 
 
