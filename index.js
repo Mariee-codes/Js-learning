@@ -2336,15 +2336,24 @@ function createCounter(){
 
     let count = 0;
 
-function increnent(){
+function increment(){
     count ++;
     console.log(`count increase to ${count}`)
 }
+function getCount(){
+    return count;
 }
 
+return{increment};
+}
 
+const counter =   createCounter();
 
+counter.increment();
+counter.increment();
+counter.increment();
 
+console.log(`The current count is ${counter.getCount()}`);
 
 
 
