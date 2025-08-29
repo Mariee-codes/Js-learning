@@ -2305,26 +2305,42 @@ const date = new Date();
 // console.log(minute);
 // console.log(seconds);
 
-date.setFullYear(2024);
-date.setMonth(0);
-date.setDate(1);
-date.setHours(2);
-date.setMinutes(3);
-date.setSeconds(4);
+// date.setFullYear(2024);
+// date.setMonth(0);
+// date.setDate(1);
+// date.setHours(2);
+// date.setMinutes(3);
+// date.setSeconds(4);
 
-console.log(date);
+// console.log(date);
 
-const date1 = new Date("2023-12-31");
-const date2 = new Date("2024-01-01");
+// const date1 = new Date("2023-12-31");
+// const date2 = new Date("2024-01-01");
 
-if(date2 > date1){
-    console.log("HAPPY NEW YEAR!");
+// if(date2 > date1){
+//     console.log("HAPPY NEW YEAR!");
+// }
+
+//CLOSURE= A function defined inside of another function, the inner funtion has access to the variables and scop of the outer funcxtion.
+function outer(){
+    let message = "hello";
+
+    function inner(){
+        console.log(message);
+    }
+    inner();
 }
 
+outer();
+function createCounter(){
 
+    let count = 0;
 
-
-
+function increnent(){
+    count ++;
+    console.log(`count increase to ${count}`)
+}
+}
 
 
 
