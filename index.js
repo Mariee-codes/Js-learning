@@ -2288,7 +2288,7 @@
 // const date = new Date(2024,0,1,2,3,4,5);
 // console.log(date);
 
-const date = new Date();
+//const date = new Date();
 
 // const year = date.getFullYear();
 // const month = date.getMonth();
@@ -2322,44 +2322,62 @@ const date = new Date();
 // }
 
 //CLOSURE= A function defined inside of another function, the inner funtion has access to the variables and scop of the outer funcxtion.
-function outer(){
-    let message = "hello";
+// function outer(){
+//     let message = "hello";
 
-    function inner(){
-        console.log(message);
-    }
-    inner();
+//     function inner(){
+//         console.log(message);
+//     }
+//     inner();
+// }
+
+// outer();
+// function createCounter(){
+
+//     let count = 0;
+
+// function increment(){
+//     count ++;
+//     console.log(`count increase to ${count}`)
+// }
+// function getCount(){
+//     return count;
+// }
+
+// return{increment};
+// }
+
+// const counter =   createCounter();
+
+// counter.increment();
+// counter.increment();
+// counter.increment();
+
+// console.log(`The current count is ${counter.getCount()}`);
+function createGame(){
+let score = 0;
+
+function increaseScore(points){
+    score += points;
+    console.log(`+${points}pts`);
 }
 
-outer();
-function createCounter(){
-
-    let count = 0;
-
-function increment(){
-    count ++;
-    console.log(`count increase to ${count}`)
+function decreaseScore(points){
+    score -= points;
+    console.log(`-${points}pts`);
 }
-function getCount(){
-    return count;
+function getScore(){
+    return score;
+}
+return{increaseScore, decreaseScore,getScore};
+
 }
 
-return{increment};
-}
+const game = createGame();
 
-const counter =   createCounter();
-
-counter.increment();
-counter.increment();
-counter.increment();
-
-console.log(`The current count is ${counter.getCount()}`);
-
-
-
-
-
-
+game.increaseScore(5);
+game.decreaseScore(9);
+console.log(`the final score is ${getScore()}pts`)
 
 
 
