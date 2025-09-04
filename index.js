@@ -2381,15 +2381,15 @@
 
 
 // JAVASCRIPT SET TIMEOUT FUNCTION
-function sayHello(){
-    window.alert("hello");
-}
+// function sayHello(){
+//     window.alert("hello");
+// }
 
-setTimeout(sayHello, 3000);
+// setTimeout(sayHello, 3000);
 
-setTimeout(function(){window.alert("hello")}, 3000);
-setTimeout(()=> window.alert("hello"),3000);
-
+// setTimeout(function(){window.alert("hello")}, 3000);
+const timeoutId = setTimeout(()=> window.alert("hello"),3000);
+clearTimeout(timeoutId);
 
 
 
