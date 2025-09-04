@@ -2388,8 +2388,9 @@
 // setTimeout(sayHello, 3000);
 
 // setTimeout(function(){window.alert("hello")}, 3000);
-const timeoutId = setTimeout(()=> window.alert("hello"),3000);
-clearTimeout(timeoutId);
+// const timeoutId = setTimeout(()=> window.alert("hello"),3000);
+// clearTimeout(timeoutId);
+
 
 
 
