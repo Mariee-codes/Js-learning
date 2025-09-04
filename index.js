@@ -2391,8 +2391,17 @@
 // const timeoutId = setTimeout(()=> window.alert("hello"),3000);
 // clearTimeout(timeoutId);
 
+let timeoutId;
 
+function startTimer(){
+   timeoutId = setTimeout(()=> window.alert("hello"), 3000);
+   console.log("STARTER");
+}
 
+function clearTimer(){
+    clearTimeout(timeoutId);
+    console.log("CLEARED");
+}
 
 
 
