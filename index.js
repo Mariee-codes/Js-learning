@@ -2391,20 +2391,25 @@
 // const timeoutId = setTimeout(()=> window.alert("hello"),3000);
 // clearTimeout(timeoutId);
 
-let timeoutId;
+// let timeoutId;
 
-function startTimer(){
-   timeoutId = setTimeout(()=> window.alert("hello"), 3000);
-   console.log("STARTER");
+// function startTimer(){
+//    timeoutId = setTimeout(()=> window.alert("hello"), 3000);
+//    console.log("STARTER");
+// }
+
+// function clearTimer(){
+//     clearTimeout(timeoutId);
+//     console.log("CLEARED");
+//}
+
+//CONSOLE.TIME
+//Tool that allows you to measure the time it takes for a section of code or process to execute.
+console.time("test");
+for (let i = 0; i< 10000000; i++){
+    // do some code here
 }
-
-function clearTimer(){
-    clearTimeout(timeoutId);
-    console.log("CLEARED");
-}
-
-
-
+console.timeEnd("test");
 
 
 
