@@ -2406,27 +2406,38 @@
 //CONSOLE.TIME
 //Tool that allows you to measure the time it takes for a section of code or process to execute.
 
-function loadData(){
-    console.time("loadData");
-    for (let i = 0; i < 1000000000; i++){
-        //pretend to load some data
-    }
-    console.timeEnd("loadData");
-}
+// function loadData(){
+//     console.time("loadData");
+//     for (let i = 0; i < 1000000000; i++){
+//         //pretend to load some data
+//     }
+//     console.timeEnd("loadData");
+// }
 
-function processData(){
-    console.time("processData");
-    for (let i = 0; i< 1000000; i++){
-        // pretend to process some data
-    }
-    console.timeEnd("processData");
-}
+// function processData(){
+//     console.time("processData");
+//     for (let i = 0; i< 1000000; i++){
+//         // pretend to process some data
+//     }
+//     console.timeEnd("processData");
+// }
 
-loadData();
-processData();
+// loadData();
+// processData();
 
+//FORMAT CURRENCY
+//.tolocaleString()= rteurns a string with a language sensitiv rep of a number.
+// Intl.Numberformat()
+//number.tolocaleString("locale",{options});
+//'locale'= specify the language(undefined = defaukt set in browser)
+// 'options' = object with formatting options
 
-
+let number = 123456.789;
+//number = number.toLocaleString("en-us");
+//number = number.toLocaleString("hi-IN");
+//number = number.toLocaleString(undefined);
+number = number.toLocaleString("en-us",{style:"currency", currency:"USD"});
+console.log(number);
 
 
 
