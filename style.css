@@ -218,7 +218,7 @@ body{
     } */
 
 
-    #container{
+    /* #container{
         font-family: Arial, sans-serif;
         text-align: center;
         font-size: 2rem;
@@ -252,4 +252,54 @@ body{
     #diceImages img{
         width:150px;
         margin:5px;
+    } */
+
+    body{
+        font-family: Arial, sans-serif;
+        background-color: hsl(0,0%,95%);
+    }
+    h1{
+        color:hsl(0,0%,30%);
+        font-size: 3em;
+        text-align: center;
+    }
+
+    form{
+        background-color: white;
+        max-width: 350px;
+        margin:auto;
+        padding:25px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px hsla(0,0%, 0%, 0.3);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    labels{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    input{
+        width:50%;
+        text-align: center;
+        font-size: 2em;
+        border: 2px solid hsl(0, 0%,90%);
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    button{
+        background-color: hsl(120, 100%, 40%);
+        color:white;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 5px;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: hsl(120, 100%, 30%);
     }

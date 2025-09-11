@@ -2432,13 +2432,14 @@
 //'locale'= specify the language(undefined = defaukt set in browser)
 // 'options' = object with formatting options
 
-let number = 123456.789;
+//let number = 123456.789;
 //number = number.toLocaleString("en-us");
 //number = number.toLocaleString("hi-IN");
 //number = number.toLocaleString(undefined);
-number = number.toLocaleString("en-us",{style:"currency", currency:"USD"});
-console.log(number);
+//number = number.toLocaleString("en-us",{style:"currency", currency:"USD"});
+//console.log(number);
 
+//JS COMPOUND INTEREST CALCULATOR
 
 
 

@@ -4,6 +4,23 @@
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>
+
+        <h1>Interest Calculator</h1>
+
+        <form>
+            <label for="principal">Principal Amount:</label><br>
+            <input type="number" id="principal" ><br>
+
+            <label for="rate">Interest Rate:</label><br>
+            <input type="number" id="rate" ><br>
+
+            <label for="years">Years:</label><br>
+            <input type="number" id="Years" ><br>
+
+            <button onclick = "calculate()">submit</button>
+
+            <p id="Total: <span id="total-amount">$0.00</span></p>
+            </form>
 <!-- <h1 id="myH1">Welcome</h1>
 <label>username:</label>
 <input id="myText"><br><br>
@@ -116,8 +133,8 @@
 
 <!-- <h1 id="myH1"></h1> -->
 
-<button onclick ="startTimer()">START</button>
-<button onclick ="clearTimer()">CLEAR</button>
+<!-- <button onclick ="startTimer()">START</button>
+<button onclick ="clearTimer()">CLEAR</button> -->
 
  <script src="../env.js"></script> 
 <script src ="../index.js"></script> 
