@@ -303,3 +303,11 @@ body{
     button:hover{
         background-color: hsl(120, 100%, 30%);
     }
+
+    #total{
+        font-size: 2em;
+    }
+    #total-amount{
+        color: hsl(120, 100%, 35%);
+        font-weight: bold;
+    }
